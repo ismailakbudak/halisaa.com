@@ -82,12 +82,9 @@ Halisaa::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.smtp_settings = Settings.smtp.mandrill
-
-  config.middleware.use ExceptionNotification::Rack,
-  :email => {
-    :email_prefix => "[Whatever] ",
-    :sender_address => %{"notifier" <notifier@example.com>},
-    :exception_recipients => %w{isoakbudak@gmail.com}
-  }
-
+  config.middleware.use ExceptionNotification::Rack, :email => {
+                                                     :email_prefix => "[Halisaa] ",
+                                                     :sender_address => %{"Halisaa Notify" <notifier@halisaa.com>},
+                                                     :exception_recipients => %w{isoakbudak@gmail.com}
+                                                   }
 end
