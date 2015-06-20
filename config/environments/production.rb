@@ -81,10 +81,9 @@ Halisaa::Application.configure do
   # Mail Setting
   config.action_mailer.default_url_options = { :host => 'halisaa.com' }
 
-
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = false
-  #config.action_mailer.smtp_settings = Settings.smtp.mandrill
+  config.action_mailer.smtp_settings = Settings.smtp.mandrill
 
   config.middleware.use ExceptionNotification::Rack,
   :email => {
