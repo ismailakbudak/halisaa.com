@@ -1,0 +1,23 @@
+en:
+  operation_failed: Operation has been failed
+  operation_success: Operation has been completed successfully
+  errors:
+    message:
+      sory: Sory
+  flash:
+    actions:
+      create:
+        notice: '%{resource_name} was successfully created.'
+      update:
+        notice: '%{resource_name} was successfully updated.'
+      destroy:
+        notice: '%{resource_name} was successfully destroyed.'
+        alert: '%{resource_name} could not be destroyed.'
+  dashboard:
+    index: Dashboard
+  users:
+    blocked_success: User has been blocked successfully
+    activated_success: User has been activated successfully
+  admins:
+    blocked_success: Admin has been blocked successfully
+    activated_success: Admin has been activated successfully

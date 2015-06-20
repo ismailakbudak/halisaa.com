@@ -1,0 +1,48 @@
+---
+en:
+  activerecord:
+    models:
+      admin: Admin
+      admins: Admins
+      user: User
+      users: Users
+      admin_profile: Admin Profile
+    attributes:
+      admin:
+        id: Id
+        email: Email
+        password: Password
+        password_confirmation: Password Confirmation
+        current_password: Current Password
+        encrypted_password: Encrypted_password
+        reset_password_token: Reset_password_token
+        reset_password_sent_at: Reset_password_sent_at
+        remember_created_at: Remember_created_at
+        sign_in_count: Sign_in_count
+        current_sign_in_at: Current_sign_in_at
+        last_sign_in_at: Last_sign_in_at
+        current_sign_in_ip: Current_sign_in_ip
+        last_sign_in_ip: Last_sign_in_ip
+        created_at: Created_at
+        updated_at: Updated_at
+        is_block: Is Blocked
+
+      admin_profile:
+        first_name: First name
+        last_name: Last name
+        gsm: Gsm
+      user:
+        id: Id
+        name: Name
+        surname: Surname
+        password: Password
+        password_confirmation: Password Confirmation
+        current_password: Current Password
+        email: Email address
+        created_at: Created_at
+        updated_at: Updated_at
+        is_block: Is Blocked
+      user_profile:
+        first_name: First name
+        last_name: Last name
+        gsm: Gsm

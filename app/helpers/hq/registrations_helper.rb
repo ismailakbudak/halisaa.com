@@ -1,0 +1,2 @@
+module Hq::RegistrationsHelper
+end

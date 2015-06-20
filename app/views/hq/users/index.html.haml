@@ -1,0 +1,29 @@
+- content_for :toolbar do
+  = link_to block_all_hq_users_path, class: 'btn btn-danger', method: :post do
+    %i.glyphicon-ban-circle
+    = t('users.block_all')
+.panel.panel-default
+  .panel-heading
+    .row
+      .col-md-8.pull-left
+        %i.icon-list.icon-large
+        = t('view.list', resource_name: User.model_name.human)
+      .col-md-4.pull-right
+        = search_form_for [:hq, @search] do |f|
+          .input-group
+            = f.search_field :name_or_email_cont, class: 'form-control', placeholder: t('users.name_or_email')
+            %span.input-group-btn
+              = f.submit t('view.search'), class: 'btn btn-info'
+  .panel-body
+    %table.table
+      %thead
+        %tr
+          %th= sort_link(@search,:name)
+          %th= sort_link(@search,:email)
+          %th= sort_link(@search,:blocked, t('activerecord.attributes.user.is_block'))
+          %th= t('view.actions')
+      %tbody
+        = render @users
+    %br
+    %div
+      = will_paginate @users, renderer: BootstrapPagination::Rails, bootstrap: 3

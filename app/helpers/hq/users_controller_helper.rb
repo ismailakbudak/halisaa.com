@@ -1,0 +1,2 @@
+module Hq::UsersControllerHelper
+end

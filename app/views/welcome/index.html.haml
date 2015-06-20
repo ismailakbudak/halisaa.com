@@ -1,0 +1,11 @@
+.jumbotron
+  %h1 Welcome to Halisaa
+  - if current_user
+    .row-fluid.marketing
+      %p
+        %strong Name:
+        = current_user.name
+      %p
+        %strong Email:
+        = current_user.email
+  - else

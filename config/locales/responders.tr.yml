@@ -1,0 +1,23 @@
+tr:
+  operation_failed: İşlem başarısız
+  operation_success: İşlem başarıyla tamamlandı
+  errors:
+    message:
+      sory: Üzgünüz
+  flash:
+    actions:
+      create:
+        notice: '%{resource_name} başarı ile yaratıldı.'
+      update:
+        notice: '%{resource_name} başarı ile güncellendi.'
+      destroy:
+        notice: '%{resource_name} başarı ile silindi.'
+        alert: '%{resource_name} silinemedi.'
+  dashboard:
+    index: Kontrol Paneli
+  users:
+    blocked_success: Kullanıcı başarıylla engellendi
+    activated_success: Kullanıcı başarıyla aktif edildi
+  admins:
+    blocked_success: Yönetici başarıylla engellendi
+    activated_success: Yönetici başarıyla aktif edildi

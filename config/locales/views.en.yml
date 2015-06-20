@@ -1,0 +1,70 @@
+en:
+  admin:
+    session:
+      title: Admin Sign in
+      button: Sign in
+      remember_me: Remember Me
+    registration:
+      title: Update Login Information
+      waiting_confirmation: 'Currently waiting confirmation for: %{email}'
+      hint_password: Leave it blank if you don't want to change it
+      hint_current_password: We need your current password to confirm your changes
+  user:
+    session:
+      title: User Sign in
+      button: Sign in
+      remember_me: Remember Me
+    registration:
+      title: Update Login Information
+      waiting_confirmation: 'Currently waiting confirmation for: %{email}'
+      hint_password: Leave it blank if you don't want to change it
+      hint_current_password: We need your current password to confirm your changes
+      new:
+        title: New Registration
+        button: Register
+    password:
+      reset:
+        title: Forgot your password?
+        instructions: Send me reset password instructions
+  dock:
+    users: Users
+    admins: Admins
+    dashboard: Dashboard
+  navbar:
+    login: Login
+    edit_profile: Edit Profile
+    edit_login_info: Edit Login Info
+    logout: Logout
+    signup: Sign Up
+    signin: Sign In
+    language:
+      en: English
+      tr: Türkçe
+  view:
+    search: Search
+    actions: Actions
+    yes: Yes
+    no: No
+    list: '%{resource_name} List'
+    blank: Not specified
+    button:
+      update: Update
+      back: Back
+  admins:
+    block: Block
+    block_all: Block All
+    activate: Activate
+    name_or_email: Name or Email
+  users:
+    block: Block
+    block_all: Block All
+    activate: Activate
+    name_or_email: Name or Email
+  shared:
+    links:
+      signup: Sign Up
+      signin: Sign In
+      forgot_password: Forgot your password?
+      confirmation_instructions: Didn't receive confirmation instructions?
+      unlock_instructions: Didn't receive unlock instructions?
+      signin_with: 'Sign in with %{name}'

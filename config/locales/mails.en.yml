@@ -1,0 +1,9 @@
+en:
+  email:
+    salut: 'Hello %{email}!'
+    devise:
+      reset_password:
+        desc1: Someone has requested a link to change your password. You can do this through the link below.
+        change: Change my password
+        desc2: If you didn't request this, please ignore this email.
+        desc3: Your password won't chanlge until you access the link above and create a new one.

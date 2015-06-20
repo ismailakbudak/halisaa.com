@@ -1,0 +1,13 @@
+- content_for :toolbar do
+  = link_to edit_user_profile_path, class: 'btn btn-default' do
+    %i.icon-pencil
+    = t('action_button.edit')
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+    = t('tt.show', resource_name: UserProfile.model_name.human)
+  .panel-body
+    = show_for @user_profile do |s|
+      = s.attribute :first_name, label: t('activerecord.attributes.user_profile.first_name'), if_blank: t('view.blank')
+      = s.attribute :last_name, label: t('activerecord.attributes.user_profile.last_name'), if_blank: t('view.blank')
+      = s.attribute :gsm, label: t('activerecord.attributes.user_profile.gsm'), if_blank: t('view.blank')

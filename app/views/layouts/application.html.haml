@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Halisaa
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .container-narrow
+      / Navbar
+      = render partial: 'layouts/partials/navbar'
+      %hr/
+      = render partial: 'layouts/partials/messages'
+      = yield
+      %hr/
+      .footer
+        %p © Halisaa 2015

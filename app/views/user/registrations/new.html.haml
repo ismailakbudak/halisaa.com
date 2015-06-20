@@ -1,0 +1,12 @@
+%h2= t('user.registration.new.title')
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :name, label: t('activerecord.attributes.user.name'), autofocus: true
+    = f.input :email, label: t('activerecord.attributes.user.email'), required: true
+    = f.input :password, label: t('activerecord.attributes.user.password'), required: true
+    = f.input :password_confirmation, label: t('activerecord.attributes.user.password_confirmation'), required: true
+  .form-actions
+    = f.button :submit, t('user.registration.new.button')
+%br
+= render "devise/shared/links"

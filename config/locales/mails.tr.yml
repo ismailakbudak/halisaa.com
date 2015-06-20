@@ -1,0 +1,9 @@
+tr:
+  email:
+    salut: 'Merhaba %{email}!'
+    devise:
+      reset_password:
+        desc1: Birileri şifrenizi değiştirmek için link isteğinde bulundu. Aşağıdaki link ile bunu yapabilirsiniz.
+        change: Şifremi değiştir
+        desc2: Eğer bu isteği siz yapmadıysanız bu e-posta'yı yok sayınız.
+        desc3: Şifreniz yukarıdaki link'e erişip yeni bir şifre oluşturmadığınız sürece değişmeyecektir.

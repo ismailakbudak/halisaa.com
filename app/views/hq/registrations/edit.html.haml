@@ -1,0 +1,20 @@
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+      = t('admin.registration.title')
+  .panel-body
+    = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :email, :required => true, :autofocus => true
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %p
+            = t('admin.registration.waiting_confirmation', email: resource.unconfirmed_email  )
+        %hr
+        = f.input :password, label: t('activerecord.attributes.admin.password'), autocomplete: "off", hint: t('admin.registration.hint_password'), required: false
+        = f.input :password_confirmation, label: t('activerecord.attributes.admin.password_confirmation'), required: false
+        %hr
+        = f.input :current_password, label: t('activerecord.attributes.admin.current_password'), hint: t('admin.registration.hint_current_password'), required: true
+      .form-actions
+        = f.button :submit, t('view.button.update')
+        = link_to t('view.button.back'), :back

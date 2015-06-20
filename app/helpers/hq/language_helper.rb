@@ -1,0 +1,2 @@
+module Hq::LanguageHelper
+end

@@ -1,0 +1,76 @@
+tr:
+  admin:
+    session:
+      title: Yönetici Girişi
+      button: Giriş Yap
+      remember_me: Beni Hatırla
+    registration:
+      title: Giriş Bilgilerini Güncelle
+      waiting_confirmation: 'E-posta addresi onayı için bekleniyor: %{email}'
+      hint_password: Değiştirmek istemiyorsanız boş bırakınız
+      hint_current_password: Değişiklikleri onaylamak için şuan ki şifrenizi girmelisiniz
+  user:
+    session:
+      title: Kullanıcı Girişi
+      button: Giriş Yap
+      remember_me: Beni Hatırla
+    registration:
+      title: Giriş Bilgilerini Güncelle
+      waiting_confirmation: 'E-posta addresi onayı için bekleniyor: %{email}'
+      hint_password: Değiştirmek istemiyorsanız boş bırakınız
+      hint_current_password: Değişiklikleri onaylamak için şuan ki şifrenizi girmelisiniz
+      new:
+        title: Kayıt İşlemi
+        button: Kayıt Ol
+    password:
+      reset:
+        title: Şifrenizi mi unuttunuz?
+        instructions: Şifre sıfırlama talimatlarını gönder
+  dock:
+    users: Kullanıcılar
+    admins: Yöneticiler
+    dashboard: Kontrol Paneli
+  navbar:
+    login: Giriş
+    edit_profile: Profil Güncelle
+    edit_login_info: Giriş Bilggilerini Güncelle
+    logout: Çıkış
+    signup: Kayıt Ol
+    signin: Giriş Yap
+    language:
+      en: English
+      tr: Türkçe
+  will_paginate:
+      previous_label: "&#8592; Önceki"
+      next_label: "Sonraki &#8594;"
+      page_gap: "&hellip;"
+  view:
+    search: Arama
+    actions: İşlemler
+    yes: Evet
+    no: Hayır
+    list: '%{resource_name} Listesi'
+    blank: Belirtilmedi
+    button:
+      update: Güncelle
+      back: Geri
+  admins:
+    block: Engelle
+    block_all: Hepsini Engelle
+    activate: Aktıf Et
+    name_or_email: İsim yada E-posta
+  users:
+    block: Engelle
+    block_all: Hepsini Engelle
+    activate: Aktıf Et
+    name_or_email: İsim yada E-posta
+  shared:
+    links:
+      signup: Kayıt Ol
+      signin: Giriş Yap
+      forgot_password: Şifrenizi mi unuttunuz?
+      confirmation_instructions: Onaylama yönergesini mi almadınız?
+      unlock_instructions: Kapatma yönergesini mi almadınız?
+      signin_with: '%{name} ile Giriş Yap'
+
+

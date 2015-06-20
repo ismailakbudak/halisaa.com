@@ -1,0 +1,10 @@
+%tr
+  %td= admin.email
+  %td= admin.blocked ? t('view.yes') : t('view.no')
+  %td
+    -#=link_to hq_admins_path , class: 'btn btn-default btn-xs' do
+    -#  %i.icon.glyphicon.glyphicon-eye-open
+    - if admin.blocked
+      = link_to t('admins.activate'), unblock_hq_admin_path(admin), class: "btn btn-success btn-xs #{admin.blocked ? '' : 'disabled'}", method: :post
+    - else
+      = link_to t('admins.block'), block_hq_admin_path(admin), class: "btn btn-danger btn-xs #{admin.blocked ? 'disabled' : ''}", method: :post
