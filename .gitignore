@@ -22,6 +22,8 @@ bin/stubs
 public/system
 tags
 vendor/bundler_gems
+vendor
+public/assets
 
 # Ignore ide and text editor
 .idea
