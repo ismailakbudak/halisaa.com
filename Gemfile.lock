@@ -159,6 +159,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.3.5)
     multi_json (1.11.0)
+    mysql (2.9.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -174,7 +175,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    pg (0.16.0)
     polyamorous (1.0.0)
       activerecord (>= 3.0)
     rack (1.5.2)
@@ -330,8 +330,8 @@ DEPENDENCIES
   katip
   letter_opener
   minitest (~> 5.3.3)
+  mysql
   paperclip (~> 3.5.1)
-  pg (~> 0.16.0)
   polyamorous (~> 1.0.0)
   rack-timeout (~> 0.0.4)
   rails (~> 4.1.1)
@@ -355,6 +355,3 @@ DEPENDENCIES
   will-paginate-i18n (~> 0.1.13)
   will_paginate (~> 3.0.4)
   will_paginate-bootstrap (~> 0.2.3)
-
-BUNDLED WITH
-   1.10.0.rc
