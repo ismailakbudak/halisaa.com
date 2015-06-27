@@ -6,7 +6,7 @@ class Hq::LanguageController < Hq::ApplicationController
       current_admin.locale = params[:locale]
       current_admin.save
     end
-    redirect_to :back
+    redirect_to root_path
   end
 
 end
