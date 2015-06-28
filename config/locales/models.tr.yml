@@ -7,6 +7,8 @@ tr:
       user: Kullanıcı
       users: Kullanıcılar
       user_profile: Kullanıcı Profili
+      company: Şirket
+      companies: Şirketler
       company_profile: Şirket Profili
     attributes:
       admin:

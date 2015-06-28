@@ -21,3 +21,6 @@ tr:
   admins:
     blocked_success: Yönetici başarıylla engellendi
     activated_success: Yönetici başarıyla aktif edildi
+  companies:
+    blocked_success: Şirket başarıylla engellendi
+    activated_success: Şirket başarıyla aktif edildi

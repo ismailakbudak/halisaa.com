@@ -1,0 +1,13 @@
+%tr
+  %td= company.company_profile.nil? ? t('view.blank') : company.company_profile.first_name
+  %td= company.email
+  %td= company.blocked ? t('view.yes') : t('view.no')
+  %td
+    -#=link_to hq_users_path , class: 'btn btn-default btn-xs' do
+    -#  %i.icon.glyphicon.glyphicon-eye-open
+    - if company.blocked
+      = link_to unblock_hq_company_path(company), class: 'btn btn-success btn-xs', title: t('companies.activate'), 'data-toggle' => 'tooltip', method: :post do
+        %i.icon-minus
+    - else
+      = link_to block_hq_company_path(company), class: 'btn btn-danger btn-xs', title: t('companies.block'), 'data-toggle' => 'tooltip', method: :post do
+        %i.icon-ban-circle

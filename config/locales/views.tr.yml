@@ -39,6 +39,7 @@ tr:
     users: Kullanıcılar
     admins: Yöneticiler
     dashboard: Kontrol Paneli
+    companies: Şirketler
   navbar:
     login: Giriş Yap
     edit_profile: Profil Güncelle
@@ -71,6 +72,11 @@ tr:
     activate: Aktıf Et
     name_or_email: İsim yada E-posta
   users:
+    block: Engelle
+    block_all: Hepsini Engelle
+    activate: Aktıf Et
+    name_or_email: İsim yada E-posta
+  companies:
     block: Engelle
     block_all: Hepsini Engelle
     activate: Aktıf Et

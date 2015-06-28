@@ -5,4 +5,4 @@
     = f.input :password, label: t('activerecord.attributes.admin.password'),  :required => false
     = f.input :remember_me, label: t('admin.session.remember_me'),   :as => :boolean if devise_mapping.rememberable?
   .form-actions
-    = f.button :submit, t('admin.session.button')
+    = f.button :submit, t('admin.session.button'), class: 'btn btn-primary'
