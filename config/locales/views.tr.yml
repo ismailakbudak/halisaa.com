@@ -20,22 +20,33 @@ tr:
       hint_password: Değiştirmek istemiyorsanız boş bırakınız
       hint_current_password: Değişiklikleri onaylamak için şuan ki şifrenizi girmelisiniz
       new:
-        title: Kayıt İşlemi
+        title: Kullanıcı Kayıt İşlemi
         button: Kayıt Ol
-    password:
-      reset:
-        title: Şifrenizi mi unuttunuz?
-        instructions: Şifre sıfırlama talimatlarını gönder
+  company:
+    session:
+      title:  Halısahacı Girişi
+      button: Giriş Yap
+      remember_me: Beni Hatırla
+    registration:
+      title: Giriş Bilgilerini Güncelle
+      waiting_confirmation: 'E-posta addresi onayı için bekleniyor: %{email}'
+      hint_password: Değiştirmek istemiyorsanız boş bırakınız
+      hint_current_password: Değişiklikleri onaylamak için şuan ki şifrenizi girmelisiniz
+      new:
+        title: Halısahacı Kayıt İşlemi
+        button:  Kayıt Ol
   dock:
     users: Kullanıcılar
     admins: Yöneticiler
     dashboard: Kontrol Paneli
   navbar:
-    login: Giriş
+    login: Giriş Yap
     edit_profile: Profil Güncelle
     edit_login_info: Giriş Bilggilerini Güncelle
     logout: Çıkış
     signup: Kayıt Ol
+    signup_as_company: Halısahacı Ol
+    login_as_company: Halısahacı Girişi
     signin: Giriş Yap
     language:
       en: English
@@ -64,6 +75,16 @@ tr:
     block_all: Hepsini Engelle
     activate: Aktıf Et
     name_or_email: İsim yada E-posta
+  common:
+    password:
+      reset:
+        title: Şifrenizi mi unuttunuz?
+        instructions: Şifre sıfırlama talimatlarını gönder
+      edit:
+        title: Şifrenizi Değiştriniz
+        new_password: Yeni şifre
+        confirmation: Yeni şifre doğrulması
+        button: Şifremi Değiştir
   shared:
     links:
       signup: Kayıt Ol
@@ -72,5 +93,8 @@ tr:
       confirmation_instructions: Onaylama yönergesini mi almadınız?
       unlock_instructions: Kapatma yönergesini mi almadınız?
       signin_with: '%{name} ile Giriş Yap'
-
+  show:
+    all: Hepsi
+    blocked: Engelliler
+    active: Aktifler
 

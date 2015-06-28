@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+    = yield :form_title
+  .panel-body
+    = simple_form_for(@company_profile, url: company_profile_path) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :first_name, label: t('activerecord.attributes.company_profile.first_name')
+        = f.input :last_name, label: t('activerecord.attributes.company_profile.last_name')
+        = f.input :gsm, label: t('activerecord.attributes.company_profile.gsm')
+      .form-actions
+        = f.button :submit, class: 'btn btn-primary'
+        = link_to t('cancel'), company_profile_path, class: 'btn btn-info'

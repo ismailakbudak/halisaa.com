@@ -1,23 +1,30 @@
 - content_for :toolbar do
   = link_to block_all_hq_admins_path, class: 'btn btn-danger', method: :post do
-    %i.glyphicon-ban-circle
+    %i.icon-ban-circle
     = t('admins.block_all')
 .panel.panel-default
   .panel-heading
     .row
       .col-md-8.pull-left
-        %i.icon-list.icon-large
-        = t('view.list', resource_name: Admin.model_name.human)
+        %h5.search-title
+          %i.icon-list.icon-large
+          = t('view.list', resource_name: Admin.model_name.human)
+        - if params[:q].present?
+          = link_to t('show.all'), hq_admins_path, class: 'btn btn-success'
+        = link_to t('show.blocked'), hq_admins_path(:q => {:blocked_eq => true}), class: 'btn btn-warning'
+        = link_to t('show.active'), hq_admins_path(:q => {:blocked_eq => false}), class: 'btn btn-info'
       .col-md-4.pull-right
         = search_form_for [:hq, @search] do |f|
           .input-group
-            = f.search_field :email_cont, class: 'form-control', placeholder: t('admins.name_or_email')
+            = f.search_field :admin_profile_first_name_or_email_cont, class: 'form-control', placeholder: t('admins.name_or_email')
             %span.input-group-btn
-              = f.submit t('view.search'), class: 'btn btn-info'
+              = f.button class: 'btn btn-info' do
+                %i.icon-search
   .panel-body
     %table.table
       %thead
         %tr
+          %th= sort_link(@search,:admin_profile_name)
           %th= sort_link(@search,:email)
           %th= sort_link(@search,:blocked, t('activerecord.attributes.admin.is_block'))
           %th= t('view.actions')

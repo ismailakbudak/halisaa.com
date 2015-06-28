@@ -7,6 +7,7 @@ tr:
       user: Kullanıcı
       users: Kullanıcılar
       user_profile: Kullanıcı Profili
+      company_profile: Şirket Profili
     attributes:
       admin:
         id: Id
@@ -45,3 +46,19 @@ tr:
         first_name: İsim
         last_name: Soyisim
         gsm: Telefon
+      company:
+        id: Id
+        name: İsim
+        surname: Soyisim
+        password: Şifre
+        password_confirmation: Şifre Onayı
+        current_password: Şuan ki şifreniz
+        email: E-posta
+        created_at: Oluşturulma Zamanı
+        updated_at: Güncellenme Zamanı
+        is_block: Engelli Mi
+      company_profile:
+        first_name: İsim
+        last_name: Soyisim
+        gsm: Telefon
+

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_filter :set_user_time_zone
+  before_filter :check_login
   respond_to :html, :json
 
   # Prevent CSRF attacks by raising an exception.
@@ -32,11 +33,19 @@ class ApplicationController < ActionController::Base
 
   def devise_parameter_sanitizer
     if resource_class == User
-      User::ParameterSanitizer.new(User, :user, params)
+      UserParameterSanitizer.new(User, :user, params) if !User.nil?
     else
       super # Use the default one
     end
   end
 
+  def check_login
+    # if company_signed_in?
+    #   redirect_to company_root_path
+    # end
+    # if admin_signed_in?
+    #   redirect_to hq_root_path
+    # end
+  end
 
 end

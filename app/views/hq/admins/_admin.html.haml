@@ -1,10 +1,15 @@
 %tr
+  %td= admin.admin_profile.first_name
   %td= admin.email
   %td= admin.blocked ? t('view.yes') : t('view.no')
   %td
     -#=link_to hq_admins_path , class: 'btn btn-default btn-xs' do
     -#  %i.icon.glyphicon.glyphicon-eye-open
     - if admin.blocked
-      = link_to t('admins.activate'), unblock_hq_admin_path(admin), class: "btn btn-success btn-xs #{admin.blocked ? '' : 'disabled'}", method: :post
+      = link_to unblock_hq_admin_path(admin), class: "btn btn-success btn-xs #{admin.blocked ? '' : 'disabled'}", method: :post do
+        %i.icon-minus
+        = t('admins.activate')
     - else
-      = link_to t('admins.block'), block_hq_admin_path(admin), class: "btn btn-danger btn-xs #{admin.blocked ? 'disabled' : ''}", method: :post
+      = link_to block_hq_admin_path(admin), class: "btn btn-danger btn-xs #{admin.blocked ? 'disabled' : ''}", method: :post do
+        %i.icon-ban-circle
+        = t('admins.block')

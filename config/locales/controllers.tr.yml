@@ -1,3 +1,5 @@
 tr:
   users:
     first_create_profile: Öncelikle bir profil oluşturmalısınız
+  companies:
+    first_create_profile: Öncelikle bir profil oluşturmalısınız

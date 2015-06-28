@@ -1,5 +1,5 @@
 %tr
-  %td= user.name
+  %td= user.user_profile.nil? ? t('view.blank') : user.user_profile.first_name
   %td= user.email
   %td= user.blocked ? t('view.yes') : t('view.no')
   %td

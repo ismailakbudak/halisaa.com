@@ -6,4 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Admin.create(:email => 'app@app.com', :password => '12341234')
+
+
+#Admin.create(:email => 'app@app.com', :password => '12341234')
+
+for i in 0..5
+  @user = User.create(:email => "#{i}-app@app.com", :password => '12341234')
+  @user.user_profile = UserProfile.create('first_name' => "#{i} first name",'last_name' => "#{i} last name",)
+end

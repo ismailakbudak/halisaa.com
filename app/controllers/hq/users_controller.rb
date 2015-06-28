@@ -5,7 +5,7 @@ class Hq::UsersController < Hq::ApplicationController
 
   def index
     @search = User.ransack(params[:q])
-    @users = @search.result.paginate(page: params[:page])
+    @users = @search.result.includes(:user_profile).paginate(page: params[:page])
   end
 
   def block_all

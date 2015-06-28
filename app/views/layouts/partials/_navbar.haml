@@ -5,7 +5,7 @@
       %li.dropdown
         %a.dropdown-toggle{data: {toggle: 'dropdown'}, :href => '#'}
           %i.fa.fa-user
-          = current_user.name
+          = current_user.email
           %b.caret
         %ul.dropdown-menu
           %li
@@ -19,13 +19,17 @@
           %li.dvider
           %li
             = link_to destroy_user_session_path, class: 'btn btn-large', method: :delete do
-              %i.fa.fa-logout
+              %i.fa.fa-sign-out
               = t('navbar.logout')
     - else
       %li
-        = link_to t('navbar.login'), new_user_session_path
+        = link_to t('navbar.login'), new_user_session_path, class: 'btn btn-primary'
       %li
         = link_to t('navbar.signup'), new_user_registration_path, class: 'btn btn-success'
+      %li
+        = link_to t('navbar.login_as_company'), new_company_session_path, class: 'btn btn-primary'
+      %li
+        = link_to t('navbar.signup_as_company'), new_company_registration_path, class: 'btn btn-success'
     -#%li.dropdown
     -#  %a.dropdown-toggle{data: {toggle: 'dropdown'}, :href => '#'}
     -#    %i.fa.fa-flag

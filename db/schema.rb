@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614210906) do
+ActiveRecord::Schema.define(version: 20150628121407) do
 
   create_table "admin_profiles", force: true do |t|
     t.string   "first_name"
@@ -44,6 +44,38 @@ ActiveRecord::Schema.define(version: 20150614210906) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
+  create_table "companies", force: true do |t|
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "locale",                 default: "tr"
+    t.string   "time_zone"
+    t.boolean  "blocked",                default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "companies", ["email"], name: "index_companies_on_email", unique: true, using: :btree
+  add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true, using: :btree
+
+  create_table "company_profiles", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gsm"
+    t.integer  "company_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "company_profiles", ["company_id"], name: "index_company_profiles_on_company_id", using: :btree
+
   create_table "user_profiles", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -66,7 +98,6 @@ ActiveRecord::Schema.define(version: 20150614210906) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "time_zone"

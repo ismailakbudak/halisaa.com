@@ -5,7 +5,7 @@ class Hq::AdminsController < Hq::ApplicationController
 
   def index
     @search = Admin.ransack(params[:q])
-    @admins = @search.result.paginate(page: params[:page])
+    @admins = @search.result.includes(:admin_profile).paginate(page: params[:page])
   end
 
   def block_all

@@ -1,4 +1,4 @@
 class Hq::PasswordsController < Devise::PasswordsController
-  layout 'login'
+  layout 'hq/login'
 end
 
