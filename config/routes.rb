@@ -44,10 +44,14 @@ Halisaa::Application.routes.draw do
     resource :company_profile, except: [:destroy], path: 'profile', as: 'profile'
   end
 
-  # Geenral
+  # General
   root to: 'welcome#index'
   get 'language/:locale' => 'language#change', :as => 'change_language'
   get '/404' => 'errors#not_found'
   get '/500' => 'errors#internal_server_error'
+
+  namespace :api do
+    resources :cities, only: [:index, :show]
+  end
 
 end
