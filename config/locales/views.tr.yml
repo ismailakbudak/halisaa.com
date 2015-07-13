@@ -1,4 +1,7 @@
 tr:
+  money:
+    try: "%{amount}  ₺"
+    usd: "%{amount}  $"
   admin:
     session:
       title: Yönetici Girişi
@@ -40,6 +43,7 @@ tr:
     admins: Yöneticiler
     dashboard: Kontrol Paneli
     companies: Şirketler
+    astroturves: Halısağalarım
   navbar:
     login: Giriş Yap
     edit_profile: Profil Güncelle
@@ -57,6 +61,7 @@ tr:
       next_label: "Sonraki &#8594;"
       page_gap: "&hellip;"
   view:
+    sure: Emin misiniz?
     search: Arama
     actions: İşlemler
     yes: Evet
@@ -103,4 +108,8 @@ tr:
     all: Hepsi
     blocked: Engelliler
     active: Aktifler
-
+  astroturves:
+    select_city: Şehir Seciniz
+    select_town: Semt Seciniz
+    drag_marker: Lokasyon seçmek için haritadaki yer işaretini sürükleyiniz.
+    name_or_address_or_phone_or_city_name: İsim, Adres, Telefon veya Şehir İsmi

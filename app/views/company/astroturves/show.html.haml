@@ -1,0 +1,40 @@
+- content_for :head do
+  = stylesheet_link_tag 'company/map'
+- content_for :toolbar do
+  = link_to edit_company_astroturf_path(@astroturf), class: 'btn btn-default' do
+    %i.icon-pencil
+    = t('action_button.edit')
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+    = t('tt.show', resource_name: Astroturf.model_name.human)
+  .panel-body
+    = show_for @astroturf do |s|
+      .col-lg-4
+        = s.attribute :name, if_blank: t('view.blank')
+        = s.attribute :phone, if_blank: t('view.blank')
+      .col-lg-4
+        = s.attribute :name, :in => :city
+        = s.attribute :name, :in => :town
+      .col-lg-4
+        = s.attribute :week_price, value: money(@astroturf.week_price)
+        = s.attribute :weekend_price, value: money(@astroturf.weekend_price)
+      .col-lg-12
+        = s.attribute :address, if_blank: t('view.blank')
+      .row
+        .col-lg-8
+          #map.collapse.in
+            #map-canvas
+- content_for :foot do
+  :javascript
+    var lng='#{@astroturf.longitude}';
+    var ltd='#{@astroturf.latitude}';
+    var zoom = 16;
+    var halisaa = {};
+    halisaa['latitude']   = ltd;
+    halisaa['longitude']  = lng;
+    halisaa['zoom']       = zoom;
+    halisaa['draggable']  = false;
+  = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&#38;sensor=false&#38;libraries=places',
+      'company/map',
+      'data-turbolinks-track' => true

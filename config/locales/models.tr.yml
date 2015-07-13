@@ -10,6 +10,8 @@ tr:
       company: Şirket
       companies: Şirketler
       company_profile: Şirket Profili
+      astroturf: Halısağa
+      astroturves: Halısağalar
     attributes:
       admin:
         id: Id
@@ -64,4 +66,19 @@ tr:
         last_name: Yetkili Soyisim
         title:  Şirket İsmi
         gsm: Telefon
-
+      astroturf:
+        name: Halısağa İsmi
+        address: Adres
+        phone: Telefon
+        city_id: Şehir
+        town_id: Semt
+        city: Şehir
+        town: Semt
+        week_price: Hafta İçi Saatlik Ücreti
+        weekend_price: Hafta sonu Saatlik Ücreti
+        latitude: Enlem
+        longitude: Boylam
+      city:
+        name: Şehir İsmi
+      town:
+        name: Semt İsmi

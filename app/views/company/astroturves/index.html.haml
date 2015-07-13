@@ -1,0 +1,37 @@
+- content_for :toolbar do
+  = link_to new_company_astroturf_path, class: 'btn btn-info' do
+    %i.icon-plus-circle
+      = t('tt.new', resource_name: Astroturf.model_name.human)
+.panel.panel-default
+  .panel-heading
+    .row
+      .col-md-8.pull-left
+        %h5.search-title
+          %i.icon-list.icon-large
+          = t('view.list', resource_name: Astroturf.model_name.human)
+        - if params[:q].present?
+          = link_to t('show.all'), company_astroturves_path, class: 'btn btn-success'
+        -#= link_to t('show.blocked'), hq_admins_path(:q => {:blocked_eq => true}), class: 'btn btn-warning'
+        -#= link_to t('show.active'), hq_admins_path(:q => {:blocked_eq => false}), class: 'btn btn-info'
+      .col-md-4.pull-right
+        = search_form_for [:company, @search] do |f|
+          .input-group
+            = f.search_field :name_or_address_or_phone_or_city_name_cont, class: 'form-control', placeholder: t('astroturves.name_or_address_or_phone_or_city_name')
+            %span.input-group-btn
+              = f.button class: 'btn btn-info' do
+                %i.icon-search
+  .panel-body
+    %table.table
+      %thead
+        %tr
+          %th= sort_link(@search,:name)
+          %th= sort_link(@search,:address)
+          %th= sort_link(@search,:phone)
+          %th= sort_link(@search,:city_name)
+          %th= sort_link(@search,:town_name)
+          %th= t('view.actions')
+      %tbody
+        = render @astroturves
+    %br
+    %div
+      = will_paginate @astroturves, renderer: BootstrapPagination::Rails, bootstrap: 3

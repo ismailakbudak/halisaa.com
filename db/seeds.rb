@@ -8,14 +8,13 @@
 
 
 
-#Admin.create(:email => 'app@app.com', :password => '12341234')
+Admin.create(:email => 'app@app.com', :password => '12341234')
 User.delete_all
 for i in 0..5
   @user = User.create(:email => "#{i}-app@app.com", :password => '12341234')
   @user.user_profile = UserProfile.create('first_name' => "#{i} first name",'last_name' => "#{i} last name",)
 end
 
-City.delete_all
 City.create([
    {name: 'ADANA'},
    {name: 'ADIYAMAN'},
@@ -100,7 +99,6 @@ City.create([
    {name: 'YOZGAT'},
    {name: 'ZONGULDAK'}
  ])
-Town.delete_all
 Town.create([
     { name: 'ALADAĞ(KARSANTI)',city_id:  1 },
     { name: 'CEYHAN',city_id:  1 },

@@ -12,12 +12,48 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require turbolinks
 #= require bootstrap
 #= require hierapolis
 
 ready = ->
-  # TODO
+  $('.city_id').change ->
+    url ='/api/cities/' + $(this).val()
+    $('.town_id option').nextAll().remove()
+    if $(this).val() != ''
+      $.get url, (response) ->
+        if !response.error
+          $.each response.data, ( index, value ) ->
+            $('.town_id').append '<option value="'+value.id+'">'+value.name+'</option>'
+    return
+  $('.phone').on 'change', ->
+    val1 = $(this).val()
+    array = val1.split(' ')
+    val = ''
+    i = 0
+    while i < array.length
+      val += array[i]
+      i++
+    $(this).val '+'
+    p = jQuery.trim(val.substring(1, val.length))
+    i = 0
+    j = 1
+    while i <= p.length and j < 13
+      p1 = val.substring(i, i+1);
+      if IntegerKontrol(p1)
+        v = $(this).val() + p1;
+        if j == 2 or j == 5 or j == 8
+          v = v + ' '
+        $(this).val v;
+        j++
+      i++;
+    if j < 13
+      $(this).val ''
+    return
+  IntegerKontrol = (val) ->
+    if isNaN(val) == true or val == ''
+      false
+    else
+      true
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

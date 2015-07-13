@@ -42,6 +42,7 @@ Halisaa::Application.routes.draw do
   namespace :company do
     root to: 'dashboard#index'
     resource :company_profile, except: [:destroy], path: 'profile', as: 'profile'
+    resources :astroturves
   end
 
   # General

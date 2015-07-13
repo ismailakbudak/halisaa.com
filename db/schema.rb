@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713074900) do
+ActiveRecord::Schema.define(version: 20150713081909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,23 @@ ActiveRecord::Schema.define(version: 20150713074900) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+
+  create_table "astroturves", force: true do |t|
+    t.integer "company_id"
+    t.string  "name"
+    t.string  "longitude"
+    t.string  "latitude"
+    t.string  "address"
+    t.string  "phone"
+    t.integer "city_id"
+    t.integer "town_id"
+    t.decimal "week_price",    precision: 7, scale: 2
+    t.decimal "weekend_price", precision: 7, scale: 2
+  end
+
+  add_index "astroturves", ["city_id"], name: "index_astroturves_on_city_id", using: :btree
+  add_index "astroturves", ["company_id"], name: "index_astroturves_on_company_id", using: :btree
+  add_index "astroturves", ["town_id"], name: "index_astroturves_on_town_id", using: :btree
 
   create_table "cities", force: true do |t|
     t.string   "name"

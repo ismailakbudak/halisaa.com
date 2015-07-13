@@ -3,6 +3,8 @@ class Company < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-        has_one :company_profile
-        accepts_nested_attributes_for :company_profile
+  has_one :company_profile
+  accepts_nested_attributes_for :company_profile
+  has_many :astroturves
+
 end

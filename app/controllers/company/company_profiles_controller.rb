@@ -1,4 +1,3 @@
-# encoding: UTF-8
 class Company::CompanyProfilesController < Company::ApplicationController
   layout 'company/application'
   before_action :set_company_profile, only: [:show, :edit, :update, :destroy]

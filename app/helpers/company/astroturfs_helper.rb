@@ -1,0 +1,2 @@
+module Company::AstroturfsHelper
+end
