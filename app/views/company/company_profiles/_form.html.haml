@@ -6,6 +6,7 @@
     = simple_form_for(@company_profile, url: company_profile_path) do |f|
       = f.error_notification
       .form-inputs
+        = f.input :title, label: t('activerecord.attributes.company_profile.title')
         = f.input :first_name, label: t('activerecord.attributes.company_profile.first_name')
         = f.input :last_name, label: t('activerecord.attributes.company_profile.last_name')
         = f.input :gsm, label: t('activerecord.attributes.company_profile.gsm')

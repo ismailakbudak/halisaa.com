@@ -60,7 +60,8 @@ tr:
         updated_at: Güncellenme Zamanı
         is_block: Engelli Mi
       company_profile:
-        first_name: İsim
-        last_name: Soyisim
+        first_name: Yetkili İsim
+        last_name: Yetkili Soyisim
+        title:  Şirket İsmi
         gsm: Telefon
 

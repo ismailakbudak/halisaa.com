@@ -41,6 +41,6 @@ class Company::CompanyProfilesController < Company::ApplicationController
   end
 
   def company_profile_params
-    params.require(:company_profile).permit(:first_name, :gsm, :last_name)
+    params.require(:company_profile).permit(:first_name, :gsm, :last_name, :title)
   end
 end

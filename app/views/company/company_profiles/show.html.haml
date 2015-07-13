@@ -10,4 +10,5 @@
     = show_for @company_profile do |s|
       = s.attribute :first_name, label: t('activerecord.attributes.company_profile.first_name'), if_blank: t('view.blank')
       = s.attribute :last_name, label: t('activerecord.attributes.company_profile.last_name'), if_blank: t('view.blank')
+      = s.attribute :title, label: t('activerecord.attributes.company_profile.title'), if_blank: t('view.blank')
       = s.attribute :gsm, label: t('activerecord.attributes.company_profile.gsm'), if_blank: t('view.blank')
