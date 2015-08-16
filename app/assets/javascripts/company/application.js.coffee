@@ -14,8 +14,12 @@
 #= require jquery_ujs
 #= require bootstrap
 #= require hierapolis
+#= require chosen-jquery
 
 ready = ->
+  # enable chosen js
+  $('.chosen-select').chosen
+    allow_single_deselect: true
   $('.city_id').change ->
     url ='/api/cities/' + $(this).val()
     $('.town_id option').nextAll().remove()
@@ -24,6 +28,9 @@ ready = ->
         if !response.error
           $.each response.data, ( index, value ) ->
             $('.town_id').append '<option value="'+value.id+'">'+value.name+'</option>'
+          $('.town_id').trigger("chosen:updated");
+    else
+      $('.town_id').trigger("chosen:updated");
     return
   $('.phone').on 'change', ->
     val1 = $(this).val()

@@ -22,7 +22,7 @@
       .col-lg-12
         = s.attribute :address, if_blank: t('view.blank')
       .row
-        .col-lg-8
+        .col-lg-4
           #map.collapse.in
             #map-canvas
 - content_for :foot do
@@ -36,5 +36,4 @@
     halisaa['zoom']       = zoom;
     halisaa['draggable']  = false;
   = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&#38;sensor=false&#38;libraries=places',
-      'company/map',
-      'data-turbolinks-track' => true
+      'company/map'

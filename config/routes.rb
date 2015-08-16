@@ -41,16 +41,18 @@ Halisaa::Application.routes.draw do
              path_names: { sign_in: 'login', sign_out: 'logout', password: 'password', confirmation: 'verification'}
   namespace :company do
     root to: 'dashboard#index'
+    get 'language/:locale' => 'language#change', :as => 'change_language'
     resource :company_profile, except: [:destroy], path: 'profile', as: 'profile'
     resources :astroturves
   end
 
   # General
-  root to: 'welcome#index'
-  get 'language/:locale' => 'language#change', :as => 'change_language'
-  get '/404' => 'errors#not_found'
-  get '/500' => 'errors#internal_server_error'
-
+  scope "(:locale)", :locale => /en|tr/ do
+    root to: 'welcome#index'
+    get 'language/:locale' => 'language#change', :as => 'change_language'
+    get '/404' => 'errors#not_found'
+    get '/500' => 'errors#internal_server_error'
+  end
   namespace :api do
     resources :cities, only: [:index, :show]
   end

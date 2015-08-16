@@ -7,7 +7,7 @@ class Hq::ApplicationController < ActionController::Base
   respond_to :html, :json
 
   private
-  def set_locale
-    I18n.locale     = current_admin.locale
-  end
+    def set_locale
+      I18n.locale = current_admin.locale
+    end
 end

@@ -12,8 +12,8 @@
           = f.input :name
           = f.input :phone, input_html: { class: 'phone', placeholder: '90 555 118 9668' }
         .col-lg-4
-          = f.input :city_id, input_html: { class: 'city_id'}, collection: City.all, include_blank: t('astroturves.select_city'), selected: @astroturf.city_id
-          = f.input :town_id, input_html: { class: 'town_id'}, collection: @astroturf.city_id.nil? ? [] : Town.where(city_id: @astroturf.city_id) , include_blank: t('astroturves.select_town'), selected: @astroturf.town_id
+          = f.input :city_id, input_html: { class: 'city_id chosen-select'}, multiple: true, collection: City.all, include_blank: t('astroturves.select_city'), selected: @astroturf.city_id
+          = f.input :town_id, input_html: { class: 'town_id chosen-select'}, collection: @astroturf.city_id.nil? ? [] : Town.where(city_id: @astroturf.city_id) , include_blank: t('astroturves.select_town'), selected: @astroturf.town_id
         .col-lg-4
           = f.input :week_price
           = f.input :weekend_price
@@ -23,7 +23,7 @@
         .col-lg-12
           %p.address= t('astroturves.drag_marker')
       .row
-        .col-lg-10
+        .col-lg-4
           #map.collapse.in
             #map-canvas
         .col-lg-2
@@ -51,5 +51,4 @@
     halisaa['zoom']       = zoom;
     halisaa['draggable']  = true;
   = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&#38;sensor=false&#38;libraries=places',
-      'company/map',
-      'data-turbolinks-track' => true
+      'company/map'

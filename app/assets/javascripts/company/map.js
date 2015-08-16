@@ -26,6 +26,7 @@ $(document).ready( function(){
                     $('.longitude').val(lat);
                     $('.latitude').val(lng);
                     $('.address').html(address);
+                    $('#astroturf_address').val(address);
                 }
             });
         });

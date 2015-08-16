@@ -8,7 +8,7 @@ class Company::ApplicationController < ActionController::Base
   respond_to :html, :json
 
   private
-  def set_locale
-    I18n.locale = current_company.locale
-  end
+    def set_locale
+      I18n.locale =  current_company.locale
+    end
 end
