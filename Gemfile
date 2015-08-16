@@ -14,8 +14,11 @@ gem 'annotate', '>=2.5.0'
 gem 'recipient_interceptor', '~> 0.1.2'
 gem 'rails-i18n', '~> 4.0.1'
 gem 'ransack', '~> 1.2.3'
-gem 'capistrano', '~> 2.15.5'
-gem 'capistrano-ext', '~> 1.2.1'
+gem 'capistrano', '~> 3.4.0'
+group :development do
+  gem 'capistrano-rails',   '~> 1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+end
 gem 'unicorn', '~> 4.8.2'
 gem 'recipes_matic', '~> 1.0.0'
 gem 'aws-sdk', '~> 1.29.0'
