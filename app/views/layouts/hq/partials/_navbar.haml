@@ -24,18 +24,18 @@
     -#    Settings
     %li.dropdown
       %a.dropdown-toggle{data: {toggle: 'dropdown'}, :href => '#'}
-        %i.icon-flag
+        %i.fa.fa-flag
         = t("navbar.language.#{I18n.locale}")
         %b.caret
       %ul.dropdown-menu
         %li
-          = link_to  hq_change_language_path('en') do
-            %i.icon-flag
-            = t('navbar.language.en')
-        %li
-          = link_to  hq_change_language_path('tr') do
-            %i.icon-flag
+          = link_to locale: :tr  do
+            %i.fa.fa-flag
             = t('navbar.language.tr')
+        %li
+          = link_to locale: :en  do
+            %i.fa.fa-flag
+            = t('navbar.language.en')
     %li.dropdown.user
       %a.dropdown-toggle{'data-toggle' => 'dropdown', :href => '#'}
         %i.icon-user

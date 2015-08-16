@@ -37,11 +37,11 @@
         %b.caret
       %ul.dropdown-menu
         %li
-          = link_to change_language_path('en') do
-            %i.fa.fa-flag
-            = t('navbar.language.en')
-        %li
-          = link_to change_language_path('tr') do
+          = link_to locale: :tr  do
             %i.fa.fa-flag
             = t('navbar.language.tr')
+        %li
+          = link_to locale: :en  do
+            %i.fa.fa-flag
+            = t('navbar.language.en')
   %h3.muted= link_to 'Halisaa', root_path
