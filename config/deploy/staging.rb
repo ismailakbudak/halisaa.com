@@ -62,3 +62,8 @@ set :branch, 'develop'
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+server "46.101.146.20", user: "#{fetch(:local_user)}", roles: %w{app db web}, primary: true
+#set :port, 2222
+set :rails_env, "staging"
+set :branch, "develop"
+set :project_domain, "46.101.146.20"

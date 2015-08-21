@@ -5,6 +5,7 @@ set :application, 'halisaa'
 set :local_user, 'deploy'
 set :stages, %w(staging production)
 set :default_stage, 'production'
+set :repo_url, 'git@github.com:ismailakbudak/halisaa.com.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -14,9 +15,7 @@ set :default_stage, 'production'
 set :deploy_to, "/home/#{local_user}/apps/#{fetch(:application)}"
 
 # Default value for :scm is :git
-# set :scm, :git
-set :scm, "git"
-set :repo_url, 'git@github.com:ismailakbudak/halisaa.com.git'
+set :scm, :git
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -25,13 +24,13 @@ set :repo_url, 'git@github.com:ismailakbudak/halisaa.com.git'
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
-# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml')
 
 # Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/upload', 'public/images')
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -40,6 +39,10 @@ set :default_env, {
 }
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+# Look our recipes
+# https://github.com/lab2023/recipes_matic
+load 'config/deploy/recipes/base.rb'
 
 namespace :deploy do
 

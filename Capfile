@@ -3,10 +3,10 @@ require 'capistrano/setup'
 
 # Include default deployment tasks
 require 'capistrano/deploy'
-
-# Added by ismail
 require 'capistrano/rails'
 require 'capistrano/bundler'
+require 'sshkit/sudo'
+require 'capistrano/maintenance'
 
 # Include tasks from other gems included in your Gemfile
 #
@@ -39,4 +39,5 @@ require 'capistrano/bundler'
 # load 'config/deploy/recipes/postgresql'
 # #load 'config/deploy/recipes/whenever'
 # load 'config/deploy/recipes/monit'
+
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
