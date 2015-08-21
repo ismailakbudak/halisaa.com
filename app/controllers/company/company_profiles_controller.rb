@@ -1,6 +1,7 @@
 class Company::CompanyProfilesController < Company::ApplicationController
   layout 'company/application'
-  before_action :set_company_profile, only: [:show, :edit, :update, :destroy]
+  before_action :check_company_profile, only: [:new, :create]
+  before_action :set_company_profile, only: [:show, :edit, :update]
   add_breadcrumb I18n.t('activerecord.models.company_profile'), :company_profile_path
 
   def show
@@ -30,6 +31,12 @@ class Company::CompanyProfilesController < Company::ApplicationController
   end
 
   private
+
+  def check_company_profile
+    if current_comapany.comapany_profile.present?
+      redirect_to comapany_profile_path
+    end
+  end
 
   def set_company_profile
     if current_company.company_profile.nil?

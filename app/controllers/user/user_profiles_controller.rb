@@ -1,6 +1,7 @@
 # encoding: UTF-8
 class User::UserProfilesController < User::ApplicationController
-  before_action :set_user_profile, only: [:show, :edit, :update, :destroy]
+  before_action :check_user_profile, only: [:new, :create]
+  before_action :set_user_profile, only: [:show, :edit, :update]
   add_breadcrumb I18n.t('activerecord.models.user_profiles'), :user_profile_path
 
   def show
@@ -30,6 +31,12 @@ class User::UserProfilesController < User::ApplicationController
   end
 
   private
+
+  def check_user_profile
+    if current_user.user_profile.present?
+      redirect_to user_profile_path
+    end
+  end
 
   def set_user_profile
     if current_user.user_profile.nil?

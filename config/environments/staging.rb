@@ -78,10 +78,19 @@ Halisaa::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  config.action_mailer.default_url_options = { :host => 'staging.halisaa.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.smtp_settings = Settings.smtp.mandrill
+  config.action_mailer.smtp_settings = {
+    address: Settings.smtp.mandrill.address,
+    port: Settings.smtp.mandrill.port,
+    enable_starttls_auto: Settings.smtp.mandrill.enable_starttls_auto,
+    user_name: Settings.smtp.mandrill.user_name,
+    password: Settings.smtp.mandrill.password,
+    authentication: Settings.smtp.mandrill.authentication
+  }
+
   config.middleware.use ExceptionNotification::Rack, :email => {
                                                      :email_prefix => "[Halisaa] ",
                                                      :sender_address => %{"Halisaa Notify" <notifier@halisaa.com>},

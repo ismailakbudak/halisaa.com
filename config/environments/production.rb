@@ -84,13 +84,14 @@ Halisaa::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mandrillapp.com',
-    port: 587,
-    enable_starttls_auto: true,
-    user_name: 'isogmail@gmail.com',
-    password: 'B9GaJCJ7tJ0b0_ZlQE7czw',
-    authentication: 'plain'
+    address: Settings.smtp.mandrill.address,
+    port: Settings.smtp.mandrill.port,
+    enable_starttls_auto: Settings.smtp.mandrill.enable_starttls_auto,
+    user_name: Settings.smtp.mandrill.user_name,
+    password: Settings.smtp.mandrill.password,
+    authentication: Settings.smtp.mandrill.authentication
   }
+
   config.middleware.use ExceptionNotification::Rack, :email => {
                                                      :email_prefix => "[Halisaa] ",
                                                      :sender_address => %{"Halisaa Notify" <notifier@halisaa.com>},

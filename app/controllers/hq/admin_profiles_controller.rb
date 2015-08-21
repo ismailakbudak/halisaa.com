@@ -1,6 +1,7 @@
 # encoding: UTF-8
 class Hq::AdminProfilesController < Hq::ApplicationController
-  before_action :set_admin_profile, only: [:show, :edit, :update, :destroy]
+  before_action :check_admin_profile, only: [:new, :create]
+  before_action :set_admin_profile, only: [:show, :edit, :update]
   add_breadcrumb I18n.t('activerecord.models.admin_profile'), :hq_admin_profile_path
 
   def show
@@ -30,6 +31,12 @@ class Hq::AdminProfilesController < Hq::ApplicationController
   end
 
   private
+
+  def check_admin_profile
+    if current_admin.admin_profile.present?
+      redirect_to admin_profile_path
+    end
+  end
 
   def set_admin_profile
     if current_admin.admin_profile.nil?
