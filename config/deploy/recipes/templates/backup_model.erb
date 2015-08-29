@@ -45,7 +45,7 @@ Backup::Model.new(:<%= fetch(:application) %>, '<%= fetch(:application)  %> - <%
         hipchat.token           = "<%= fetch(:hipchat_token) %>"
         # get first 15 character of application, there is an error after 15 length
         hipchat.from            = "<%= fetch(:application)[0..14] %>"
-        hipchat.rooms_notified  = ["halisaa.backup"]
+        hipchat.rooms_notified  = ["backup"]
         hipchat.success_color   = "green"
         hipchat.warning_color   = "yellow"
         hipchat.failure_color   = "red"

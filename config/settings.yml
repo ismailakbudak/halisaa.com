@@ -1,5 +1,8 @@
 email:
   noreply: noreply@halisaa.com
+
+rollbar:
+  access_token: 0a38efefefff478b8df0062c5e66e616
 smtp:
   mandrill:
     address: 'smtp.mandrillapp.com'

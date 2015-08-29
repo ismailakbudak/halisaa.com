@@ -66,3 +66,6 @@ group :development, :test do
   gem 'capybara'
   gem 'bullet'
 end
+
+# Added later
+gem 'rollbar', '~> 2.2.0'
