@@ -1,31 +1,3 @@
-# server-based syntax
-# ======================
-# Defines a single server with a list of roles and multiple properties.
-# You can define all roles on a single server, or split them:
-
-# server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
-# server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
-# server 'db.example.com', user: 'deploy', roles: %w{db}
-server '46.101.146.20', user: "#{local_user}", roles: %w{app db web}, primary: true
-#set :port, 2222
-set :rails_env, 'production'
-set :branch, 'develop'
-
-
-# role-based syntax
-# ==================
-
-# Defines a role with one or multiple servers. The primary server in each
-# group is considered to be the first unless any  hosts have the primary
-# property set. Specify the username and a domain or IP for the server.
-# Don't use `:all`, it's a meta role.
-
-# role :app, %w{deploy@example.com}, my_property: :my_value
-# role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
-# role :db,  %w{deploy@example.com}
-
-
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -62,8 +34,8 @@ set :branch, 'develop'
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-server "46.101.142.148", user: "#{fetch(:local_user)}", roles: %w{app db web}, primary: true
+server '46.101.142.148', user: "#{fetch(:local_user)}", roles: %w{app db web}, primary: true, port: 22
 #set :port, 2222
-set :rails_env, "production"
-set :branch, "develop"
-set :project_domain, "46.101.142.148"
+set :rails_env, 'production'
+set :branch, 'develop'
+set :project_domain, '46.101.142.148'

@@ -17,6 +17,7 @@ gem 'capistrano', '~> 3.4.0'
 group :development do
   gem 'capistrano-rails',   '~> 1.1', require: false
   gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'sshkit', '~> 1.7.1', require: false
   gem 'sshkit-sudo', require: false
   gem 'capistrano-maintenance', '~> 1.0', require: false
   gem 'recipes_matic', git: 'https://github.com/lab2023/recipes_matic.git', branch: 'feature/improvement'
