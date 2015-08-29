@@ -15,6 +15,7 @@
 #= require bootstrap
 #= require hierapolis
 #= require chosen-jquery
+#= require_tree .
 
 ready = ->
   # enable chosen js
