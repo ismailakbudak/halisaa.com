@@ -47,8 +47,8 @@ Halisaa::Application.routes.draw do
   # General
   scope "(:locale)", :locale => /en|tr/ do
     root to: 'welcome#index'
-    get '/404' => 'errors#not_found'
-    get '/500' => 'errors#internal_server_error'
+    # get '/404' => 'errors#not_found'
+    # get '/500' => 'errors#internal_server_error'
   end
   namespace :api do
     resources :cities, only: [:index, :show]

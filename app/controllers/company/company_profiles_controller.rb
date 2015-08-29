@@ -33,7 +33,7 @@ class Company::CompanyProfilesController < Company::ApplicationController
   private
 
   def check_company_profile
-    if current_comapany.comapany_profile.present?
+    if current_company.company_profile.present?
       redirect_to comapany_profile_path
     end
   end
