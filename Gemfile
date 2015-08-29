@@ -19,7 +19,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1', require: false
   gem 'sshkit-sudo', require: false
   gem 'capistrano-maintenance', '~> 1.0', require: false
-  gem 'recipes_matic', git: 'https://github.com/lab2023/recipes_matic.git', branch: 'feature/upgrade'
+  gem 'recipes_matic', git: 'https://github.com/lab2023/recipes_matic.git', branch: 'feature/improvement'
 end
 gem 'unicorn', '~> 4.9.0'
 gem 'exception_notification', '~> 4.1.1'
@@ -41,14 +41,16 @@ gem 'hierapolis-rails', '~> 1.1.0'
 gem 'breadcrumbs_on_rails', '~> 2.3.1'
 gem 'blankable', '~> 0.2.0'
 
-# gem 'sass-rails', '~> 5.0.3'
-# gem 'compass-rails', '~> 2.0.5'
-# gem 'bootstrap-sass', '~> 3.3.4'
-gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails', '~> 1.1'
+gem 'sass-rails', '~> 5.0.3'
+gem 'compass-rails', '~> 2.0.5'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'chosen-rails', '1.4.1'
-gem 'chosen-sass-bootstrap-rails', '0.0.2'
+gem 'bootstrap-chosen-rails', '0.0.4'
+# gem 'sass-rails', '~> 4.0.0'
+# gem 'compass-rails', '~> 1.1'
+# gem 'bootstrap-sass', '~> 3.3.4'
+# gem 'chosen-rails', '1.4.1'
+# gem 'chosen-sass-bootstrap-rails', '0.0.2'
 
 group :doc do
   gem 'sdoc', require: false
