@@ -4,7 +4,9 @@
     %title Halisaa
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    / Javascripts
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js',
+                           'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     .container-narrow

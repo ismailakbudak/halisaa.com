@@ -27,6 +27,9 @@
     = stylesheet_link_tag 'company/application',
                           '//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css',
                           media: 'all'
+    / Javascripts
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js',
+                             'company/application', 'data-turbolinks-track' => false
     = yield :head
 
   %body.main
