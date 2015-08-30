@@ -7,4 +7,6 @@ class Company < ActiveRecord::Base
   accepts_nested_attributes_for :company_profile
   has_many :astroturves
 
+  validates_inclusion_of :time_zone, in: ActiveSupport::TimeZone.zones_map(&:name).keys
+
 end

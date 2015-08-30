@@ -40,12 +40,14 @@ Halisaa::Application.routes.draw do
              path_names: { sign_in: 'login', sign_out: 'logout', password: 'password', confirmation: 'verification'}
   namespace :company do
     root to: 'dashboard#index'
+    get 'edit_company' => 'company#edit', :as => 'edit'
+    put 'update_company' => 'company#update', :as => 'update'
     resource :company_profile, except: [:destroy], path: 'profile', as: 'profile'
     resources :astroturves
   end
 
   # General
-  scope "(:locale)", :locale => /en|tr/ do
+  scope '(:locale)', :locale => /en|tr/ do
     root to: 'welcome#index'
     # get '/404' => 'errors#not_found'
     # get '/500' => 'errors#internal_server_error'

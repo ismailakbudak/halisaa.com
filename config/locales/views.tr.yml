@@ -30,6 +30,8 @@ tr:
       title:  Halısahacı Girişi
       button: Giriş Yap
       remember_me: Beni Hatırla
+    edit:
+      title: Ayarları Güncelle
     registration:
       title: Giriş Bilgilerini Güncelle
       waiting_confirmation: 'E-posta addresi onayı için bekleniyor: %{email}'
@@ -53,6 +55,7 @@ tr:
     signup_as_company: Halısahacı Ol
     login_as_company: Halısahacı Girişi
     signin: Giriş Yap
+    settings: Ayarlar
     language:
       en: English
       tr: Türkçe
@@ -61,6 +64,7 @@ tr:
       next_label: "Sonraki &#8594;"
       page_gap: "&hellip;"
   view:
+    choose: Lütfen Seçiniz
     sure: Emin misiniz?
     search: Arama
     actions: İşlemler

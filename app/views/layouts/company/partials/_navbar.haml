@@ -18,10 +18,10 @@
     -#      %a{:href => '#'} Out box
     -#    %li
     -#      %a{:href => '#'} Trash
-    -#%li
-    -#  = link_to  hq_change_language_path('en') do
-    -#    %i.icon-cog
-    -#    Settings
+    %li
+      = link_to  company_edit_path do
+        %i.icon-cog
+        = t('navbar.settings')
     %li.dropdown
       %a.dropdown-toggle{data: {toggle: 'dropdown'}, :href => '#'}
         %i.fa.fa-flag

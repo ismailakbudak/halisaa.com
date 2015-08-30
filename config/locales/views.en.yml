@@ -4,6 +4,8 @@ en:
       title: Admin Sign in
       button: Sign in
       remember_me: Remember Me
+    edit:
+      title: Ayarları Güncelle
     registration:
       title: Update Login Information
       waiting_confirmation: 'Currently waiting confirmation for: %{email}'
@@ -37,11 +39,13 @@ en:
     logout: Logout
     signup: Sign Up
     signin: Sign In
+    settings: Ayarlar
     language:
       en: English
       tr: Türkçe
   view:
     search: Search
+    choose: Lütfen Seçiniz
     actions: Actions
     yes: Yes
     no: No

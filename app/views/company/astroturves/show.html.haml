@@ -11,6 +11,8 @@
       .col-lg-4
         = s.attribute :name, if_blank: t('view.blank')
         = s.attribute :phone, if_blank: t('view.blank')
+        = s.attribute :start_time, value: @astroturf.start_time.strftime("%H:%M")
+        = s.attribute :finish_time, value: @astroturf.finish_time.strftime("%H:%M")
       .col-lg-4
         = s.attribute :name, :in => :city
         = s.attribute :name, :in => :town

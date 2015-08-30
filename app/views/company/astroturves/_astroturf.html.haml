@@ -1,11 +1,11 @@
 %tr
   %td= astroturf.name
-  %td= astroturf.address
   %td= astroturf.phone
   %td= astroturf.city.name
   %td= astroturf.town.name
+  %td= l astroturf.created_at
   %td
     =link_to edit_company_astroturf_path(astroturf), class: 'btn btn-success btn-xs' do
-      %i.icon.glyphicon.glyphicon-pencil
+      %i.fa.fa-pencil
     =link_to company_astroturf_path(astroturf), data: {:confirm => t('view.sure')}, class: 'btn btn-danger btn-xs', method: :delete do
-      %i.icon.glyphicon.glyphicon-trash
+      %i.fa.fa-trash

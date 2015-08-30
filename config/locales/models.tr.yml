@@ -61,6 +61,7 @@ tr:
         created_at: Oluşturulma Zamanı
         updated_at: Güncellenme Zamanı
         is_block: Engelli Mi
+        time_zone: Zaman Bölgesi
       company_profile:
         first_name: Yetkili İsim
         last_name: Yetkili Soyisim
@@ -78,6 +79,9 @@ tr:
         weekend_price: Hafta sonu Saatlik Ücreti
         latitude: Enlem
         longitude: Boylam
+        start_time: Mesai Başlangıç Saati
+        finish_time: Mesai Bitiş Saati
+        created_at: Oluşturulma Zamanı
       city:
         name: Şehir İsmi
       town:

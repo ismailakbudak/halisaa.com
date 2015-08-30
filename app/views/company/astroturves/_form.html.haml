@@ -27,7 +27,9 @@
         .col-lg-2
           = f.input :latitude, input_html: { class: 'latitude'}
           = f.input :longitude, input_html: { class: 'longitude'}
-
+        .col-lg-2
+          = f.input :start_time
+          = f.input :finish_time
       .form-actions
         = f.button :submit, class: 'btn btn-primary'
         = link_to t('cancel'), company_astroturves_path, class: 'btn btn-info'

@@ -1,0 +1,12 @@
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+      = t('company.edit.title')
+  .panel-body
+    = simple_form_for(current_company, :url => company_update_path, :html => { :method => :put }) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :time_zone, input_html: { class: 'chosen-select'}, include_blank: t('view.choose')
+      .form-actions
+        = f.button :submit, t('view.button.update'), class: 'btn btn-primary'
+        = link_to t('view.button.back'), :back, class: 'btn btn-info'

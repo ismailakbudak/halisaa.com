@@ -25,10 +25,10 @@
       %thead
         %tr
           %th= sort_link(@search,:name)
-          %th= sort_link(@search,:address)
           %th= sort_link(@search,:phone)
           %th= sort_link(@search,:city_name)
           %th= sort_link(@search,:town_name)
+          %th= sort_link(@search,:created_at)
           %th= t('view.actions')
       %tbody
         = render @astroturves
