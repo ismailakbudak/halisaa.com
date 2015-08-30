@@ -3,7 +3,7 @@
     %i.icon-plus-circle
       = t('tt.new', resource_name: Astroturf.model_name.human)
 .panel.panel-default
-  =blankable(@astroturves)
+  = blankable( current_company.astroturves.count)
   .panel-footer
     .pagination.pagination-sm
       = will_paginate @astroturves, renderer: BootstrapPagination::Rails, bootstrap: 3

@@ -65,6 +65,8 @@ tr:
       page_gap: "&hellip;"
   view:
     choose: Lütfen Seçiniz
+    blank_message: Hiç bir veri bulunamadı
+    reload: Yeniden Yükle
     sure: Emin misiniz?
     search: Arama
     actions: İşlemler

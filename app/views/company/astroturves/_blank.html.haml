@@ -1,1 +1,6 @@
-%h1 Your blank message here
+.panel-heading
+  %i.icon-table.icon-large
+  = t('tt.index', resource_name: Astroturf.model_name.human)
+.panel-body
+  .alert.alert-info
+    = t('view.blank_message')

@@ -45,6 +45,8 @@ en:
       tr: Türkçe
   view:
     search: Search
+    blank_message: Hiç bir veri bulunamadı
+    reload: Yeniden Yükle
     choose: Lütfen Seçiniz
     actions: Actions
     yes: Yes

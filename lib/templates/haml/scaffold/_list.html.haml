@@ -3,7 +3,7 @@
   = t('tt.index', resource_name: <%= singular_table_name.capitalize %>.model_name.human)
   .panel-tools
     .btn-group
-      %a.btn{href: <%= index_helper %>_path, data: {toggle: 'toolbar-tooltip'}, title: 'Reload'}
+      %a.btn{href: <%= index_helper %>_path, data: {toggle: 'toolbar-tooltip'}, title: t('view.reload')}
         %i.icon-refresh
     .badge= @<%= plural_table_name %>.total_entries
 .panel-body.filters

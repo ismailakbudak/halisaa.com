@@ -40,7 +40,7 @@ gem 'haml', '~> 4.0.2'
 gem 'haml-rails', '0.9.0'
 gem 'hierapolis-rails', '~> 1.1.0'
 gem 'breadcrumbs_on_rails', '~> 2.3.1'
-gem 'blankable', '~> 0.2.0'
+gem 'blankable', git: 'https://github.com/lab2023/blankable.git', branch: 'develop'
 
 gem 'sass-rails', '~> 5.0.3'
 gem 'compass-rails', '~> 2.0.5'

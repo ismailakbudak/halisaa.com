@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/lab2023/blankable.git
+  revision: a42acb459f93afb8cd27223c1067fde43bf85b34
+  branch: develop
+  specs:
+    blankable (0.2.0)
+
+GIT
   remote: https://github.com/lab2023/recipes_matic.git
   revision: 01812de233b2131c9ded56226e1aa31bb8dc7ee1
   branch: feature/improvement
@@ -58,7 +65,6 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    blankable (0.2.0)
     bootstrap-chosen-rails (0.0.4)
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
@@ -354,7 +360,7 @@ DEPENDENCIES
   annotate (~> 2.6.0)
   better_errors
   binding_of_caller
-  blankable (~> 0.2.0)
+  blankable!
   bootstrap-chosen-rails (= 0.0.4)
   bootstrap-sass (~> 3.3.4)
   breadcrumbs_on_rails (~> 2.3.1)

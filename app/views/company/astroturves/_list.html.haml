@@ -3,7 +3,7 @@
   = t('tt.index', resource_name: Astroturf.model_name.human)
   .panel-tools
     .btn-group
-      %a.btn{href: company_astroturves_path, data: {toggle: 'toolbar-tooltip'}, title: 'Reload'}
+      %a.btn{href: company_astroturves_path, data: {toggle: 'toolbar-tooltip'}, title: t('view.reload')}
         %i.icon-refresh
     .badge= @astroturves.total_entries
 .panel-body.filters

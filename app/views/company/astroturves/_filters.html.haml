@@ -1,22 +1,11 @@
 .table-header.row
-  -#.col-lg-9
-  -#  TODO: Add filters here
-  -#.col-lg-3
-  -#  = search_form_for @search, builder: SimpleForm::FormBuilder do |f|
-  -#    .input-group
-  -#      = f.input_field :string_cont, label: false, input_html: {class: 'form-control'}, placeholder: 'Quick search...'
-  -#      %span.input-group-btn
-  -#        = button_tag( class: 'btn') do
-  -#          %i.icon-search
-  .col-md-8.pull-left
-    %h5.search-title
-      %i.icon-list.icon-large
-      = t('view.list', resource_name: Astroturf.model_name.human)
+  .col-lg-8
     - if params[:q].present?
-      = link_to t('show.all'), company_astroturves_path, class: 'btn btn-success'
-  -#= link_to t('show.blocked'), hq_admins_path(:q => {:blocked_eq => true}), class: 'btn btn-warning'
-  -#= link_to t('show.active'), hq_admins_path(:q => {:blocked_eq => false}), class: 'btn btn-info'
-  .col-md-4.pull-right
+      = link_to company_astroturves_path, class: 'btn btn-success' do
+        .badge
+          = current_company.astroturves.count
+        = t('show.all')
+  .col-lg-4
     = search_form_for [:company, @search] do |f|
       .input-group
         = f.search_field :name_or_address_or_phone_or_city_name_cont, class: 'form-control', placeholder: t('astroturves.name_or_address_or_phone_or_city_name')
