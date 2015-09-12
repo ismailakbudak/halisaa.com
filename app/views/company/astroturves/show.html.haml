@@ -1,7 +1,11 @@
 - content_for :toolbar do
-  = link_to edit_company_astroturf_path(@astroturf), class: 'btn btn-default' do
+  = link_to edit_company_astroturf_path(@astroturf), class: 'btn btn-default', title: t('tooltip.edit'), data: {toggle: 'tooltip', placement: 'bottom'} do
     %i.icon-pencil
     = t('action_button.edit')
+  =link_to timetable_company_astroturf_path(@astroturf), class: 'btn btn-info', title: t('tooltip.timetable'), data: {toggle: 'tooltip', placement: 'bottom'} do
+    %i.fa.fa-calendar
+    = t('tooltip.timetable')
+
 .panel.panel-default
   .panel-heading
     %i.icon-edit.icon-large

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830101952) do
+ActiveRecord::Schema.define(version: 20150912151612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,20 @@ ActiveRecord::Schema.define(version: 20150830101952) do
   end
 
   add_index "company_profiles", ["company_id"], name: "index_company_profiles_on_company_id", using: :btree
+
+  create_table "timetables", force: :cascade do |t|
+    t.integer  "astroturf_id"
+    t.datetime "start"
+    t.datetime "finish"
+    t.string   "desc"
+    t.string   "source"
+    t.integer  "source_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "status",       default: 0
+  end
+
+  add_index "timetables", ["astroturf_id"], name: "index_timetables_on_astroturf_id", using: :btree
 
   create_table "towns", force: :cascade do |t|
     t.integer  "city_id"

@@ -1,4 +1,9 @@
 en:
+  tooltip:
+    show: Göster
+    delete: Sil
+    edit: Düzenle
+    timetable: Zaman Çizelgesi
   simple_form:
     "yes": 'Yes'
     "no": 'No'

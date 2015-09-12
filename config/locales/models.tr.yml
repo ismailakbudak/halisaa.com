@@ -12,6 +12,7 @@ tr:
       company_profile: Şirket Profili
       astroturf: Halısağa
       astroturves: Halısağalar
+      timetable: Zaman Çizelgesi
     attributes:
       admin:
         id: Id

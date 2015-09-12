@@ -1,6 +1,7 @@
 class Company::CompanyController < Company::ApplicationController
   layout 'company/application'
   before_action :authenticate_company!
+  add_breadcrumb I18n.t('activerecord.models.company'), :company_root_path
 
   def edit
   end

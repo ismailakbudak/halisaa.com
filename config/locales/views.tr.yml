@@ -1,4 +1,9 @@
 tr:
+  javascript:
+    remove_text: Kaldır
+    available_text: Müsait
+    not_available_text: Müsait Değil
+    error_occurred_text: Hata oluştu
   money:
     try: "%{amount}  ₺"
     usd: "%{amount}  $"

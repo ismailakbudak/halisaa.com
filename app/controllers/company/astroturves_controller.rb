@@ -1,6 +1,6 @@
 class Company::AstroturvesController < Company::ApplicationController
   layout 'company/application'
-  before_action :set_astroturf, only: [:show, :edit, :update, :destroy]
+  before_action :set_astroturf, only: [:show, :edit, :update, :destroy, :timetable]
   add_breadcrumb I18n.t('activerecord.models.astroturves'), :company_astroturves_path
 
   def index
@@ -39,6 +39,15 @@ class Company::AstroturvesController < Company::ApplicationController
     @astroturf.destroy
     respond_with(@astroturf, location: company_astroturves_path)
   end
+
+  def timetable
+    add_breadcrumb @astroturf.name, company_astroturf_path(@astroturf)
+    add_breadcrumb Timetable.model_name.human, timetable_company_astroturf_path(@astroturf)
+    @empty_timetable = @astroturf.timetables.empty.order('created_at').first
+    @empty_timetable = @astroturf.timetables.create! if @empty_timetable.nil?
+    respond_with(@astroturf)
+  end
+
   private
 
   def set_astroturf

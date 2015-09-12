@@ -4,9 +4,9 @@
   %td= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
   %td.action
-    = link_to(<%= singular_table_name %>, class: 'btn btn-success', toogle: 'tooltip', title: t('tooltips.zoom')) do
+    = link_to(<%= singular_table_name %>, class: 'btn btn-success', data: {toggle: 'tooltip'}, title: t('tooltips.zoom')) do
       %i.icon-zoom-in
-    = link_to(edit_<%= singular_table_name %>_path(<%= singular_table_name %>) , class: 'btn btn-info') do
+    = link_to(edit_<%= singular_table_name %>_path(<%= singular_table_name %>) , class: 'btn btn-info', data: {toggle: 'tooltip'}, title: t('tooltip.edit')) do
       %i.icon-edit
-    = link_to(<%= singular_table_name %>, class: 'btn btn-danger', method: :delete) do
+    = link_to(<%= singular_table_name %>, class: 'btn btn-danger', method: :delete, data: {toggle: 'tooltip', confirm: t('view.sure')}, title: t('tooltip.delete')) do
       %i.icon-trash

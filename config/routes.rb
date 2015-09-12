@@ -43,7 +43,9 @@ Halisaa::Application.routes.draw do
     get 'edit_company' => 'company#edit', :as => 'edit'
     put 'update_company' => 'company#update', :as => 'update'
     resource :company_profile, except: [:destroy], path: 'profile', as: 'profile'
-    resources :astroturves
+    resources :astroturves do
+      get :timetable, on: :member
+    end
   end
 
   # General
@@ -54,6 +56,12 @@ Halisaa::Application.routes.draw do
   end
   namespace :api do
     resources :cities, only: [:index, :show]
+    namespace :company do
+      resources :astroturves, only: [] do
+        resource :timetables, only: [ :create, :update, :destroy]
+        get 'timetables/index' => 'timetables#index', as: 'timetables_index'
+      end
+    end
   end
 
 end

@@ -2,6 +2,8 @@ class Astroturf < ActiveRecord::Base
   belongs_to :company
   belongs_to :city
   belongs_to :town
+  has_many :timetables
+
   validates_presence_of :name, :longitude, :latitude, :address, :phone, :city_id, :town_id, :week_price, :weekend_price
   validates_numericality_of :week_price, greater_than: 0
   validates_numericality_of :weekend_price, greater_than: 0

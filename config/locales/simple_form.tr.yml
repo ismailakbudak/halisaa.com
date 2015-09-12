@@ -1,5 +1,10 @@
 # encoding: utf-8
 tr:
+  tooltip:
+    show: Göster
+    delete: Sil
+    edit: Düzenle
+    timetable: Zaman Çizelgesi
   simple_form:
     "yes": 'Evet'
     "no": 'Hayır'

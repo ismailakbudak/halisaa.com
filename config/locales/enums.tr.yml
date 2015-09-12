@@ -1,0 +1,13 @@
+tr:
+  enums:
+    user:
+      gender:
+        not_initial: Belirtilmedi
+        male: Erkek
+        female: Kadın
+    timetable:
+      status:
+        empty: Boş
+        available: Müsait
+        not_available: Müsait Değil
+        booked: Rezerve
