@@ -4,7 +4,11 @@ class Admin < ActiveRecord::Base
   audited
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-        has_one :admin_profile, dependent: :restrict_with_error
-        accepts_nested_attributes_for :admin_profile
+  has_one :admin_profile, dependent: :restrict_with_error
+  accepts_nested_attributes_for :admin_profile
+
+  def active_for_authentication?
+    super && !self.blocked # i.e. super && self.is_active
+  end
 
 end

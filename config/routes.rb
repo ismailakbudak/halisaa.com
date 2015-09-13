@@ -22,7 +22,7 @@ Halisaa::Application.routes.draw do
       post :unblock, on: :member
       post :block_all, on: :collection
     end
-    resources :companies, except: [:create, :new] do
+    resources :companies, except: [:destroy] do
       post :block, on: :member
       post :unblock, on: :member
       post :sing_in, on: :member

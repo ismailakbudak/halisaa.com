@@ -7,6 +7,17 @@ class Hq::CompaniesController < Hq::ApplicationController
     @companies = @search.result.includes(:company_profile).paginate(page: params[:page])
   end
 
+  def new
+    @company = Company.new
+    @company.build_company_profile
+  end
+
+  def create
+    @company = Company.new company_params
+    @company.save
+    respond_with @company, location: hq_companies_path
+  end
+
   def block_all
     Company.update_all(blocked: true)
     flash[:success] = t('operation_success')
@@ -15,7 +26,7 @@ class Hq::CompaniesController < Hq::ApplicationController
 
   def block
     @company.blocked = true
-    if @company.save
+    if @company.save!(validate: false)
       flash[:success] = t('companies.blocked_success')
     else
       flash[:danger] = t('operation_failed')
@@ -25,7 +36,7 @@ class Hq::CompaniesController < Hq::ApplicationController
 
   def unblock
     @company.blocked = false
-    if @company.save
+    if @company.save!(validate: false)
       flash[:success] = t('companies.activated_success')
     else
       flash[:danger] = t('operation_failed')
@@ -43,4 +54,7 @@ class Hq::CompaniesController < Hq::ApplicationController
       @company = Company.find(params[:id])
     end
 
+    def company_params
+      params.require(:company).permit(:email, :password, :password_confirmation, company_profile_attributes: [:first_name, :gsm, :last_name, :title])
+    end
 end

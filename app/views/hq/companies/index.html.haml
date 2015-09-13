@@ -2,6 +2,9 @@
   = link_to block_all_hq_companies_path, class: 'btn btn-danger', method: :post do
     %i.icon-ban-circle
     = t('companies.block_all')
+  = link_to new_hq_company_path, class: 'btn btn-info' do
+    %i.fa.fa-plus
+    = t('tt.new', resource_name: Company.model_name.human)
 .panel.panel-default
   .panel-heading
     .row

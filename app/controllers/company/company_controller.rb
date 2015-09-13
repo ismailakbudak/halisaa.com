@@ -7,8 +7,9 @@ class Company::CompanyController < Company::ApplicationController
   end
 
   def update
-    current_company.update(company_params)
-    respond_with(current_company, location: company_edit_path)
+    @company = current_company
+    @company.update(company_params)
+    respond_with(@company, location: company_edit_path)
   end
 
   private
