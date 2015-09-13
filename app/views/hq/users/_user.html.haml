@@ -7,7 +7,7 @@
     -#  %i.icon.glyphicon.glyphicon-eye-open
     - if user.blocked
       = link_to unblock_hq_user_path(user), class: 'btn btn-success btn-xs', title: t('users.activate'), 'data-toggle' => 'tooltip', method: :post do
-        %i.icon-minus
+        %i.fa.fa-check
     - else
       = link_to block_hq_user_path(user), class: 'btn btn-danger btn-xs', title: t('users.block'), 'data-toggle' => 'tooltip', method: :post do
         %i.icon-ban-circle

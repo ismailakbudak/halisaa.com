@@ -1,4 +1,6 @@
 class City < ActiveRecord::Base
-  has_many :towns
-  has_many :astroturves
+  audited
+
+  has_many :towns, dependent: :restrict_with_error
+  has_many :astroturves, dependent: :restrict_with_error
 end

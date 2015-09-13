@@ -7,7 +7,7 @@
     -#  %i.icon.glyphicon.glyphicon-eye-open
     - if company.blocked
       = link_to unblock_hq_company_path(company), class: 'btn btn-success btn-xs', title: t('companies.activate'), 'data-toggle' => 'tooltip', method: :post do
-        %i.icon-minus
+        %i.fa.fa-check
     - else
       = link_to block_hq_company_path(company), class: 'btn btn-danger btn-xs', title: t('companies.block'), 'data-toggle' => 'tooltip', method: :post do
         %i.icon-ban-circle

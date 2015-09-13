@@ -1,4 +1,5 @@
 class Timetable < ActiveRecord::Base
+  audited
   belongs_to :astroturf
 
   # Enums

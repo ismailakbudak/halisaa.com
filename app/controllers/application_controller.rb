@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   respond_to :html, :json
 
+  # Set audit current user
+  Audited.current_user_method = :current_user
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception

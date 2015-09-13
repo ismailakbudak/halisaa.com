@@ -1,4 +1,5 @@
 class UserProfile < ActiveRecord::Base
+  audited
 
   belongs_to :user
 

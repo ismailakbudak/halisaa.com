@@ -1,8 +1,10 @@
 class Astroturf < ActiveRecord::Base
+  audited
+
   belongs_to :company
   belongs_to :city
   belongs_to :town
-  has_many :timetables
+  has_many :timetables, dependent: :restrict_with_error
 
   validates_presence_of :name, :longitude, :latitude, :address, :phone, :city_id, :town_id, :week_price, :weekend_price
   validates_numericality_of :week_price, greater_than: 0

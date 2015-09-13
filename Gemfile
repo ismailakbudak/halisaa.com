@@ -70,3 +70,4 @@ end
 # Added later
 gem 'rollbar', '~> 2.2.0'
 gem 'enum_help', '~> 0.0.14'
+gem 'audited-activerecord', '~> 4.0'

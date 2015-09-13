@@ -1,4 +1,5 @@
 class CompanyProfile < ActiveRecord::Base
+  audited
 
   belongs_to :company
 

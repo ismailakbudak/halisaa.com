@@ -15,9 +15,12 @@
 #= require turbolinks
 #= require bootstrap
 #= require hierapolis
+#= require chosen-jquery
 
 ready = ->
-  # TODO
+  # enable chosen js
+  $('.chosen-select').chosen
+    allow_single_deselect: true
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

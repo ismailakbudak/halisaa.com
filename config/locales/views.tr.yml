@@ -1,4 +1,10 @@
 tr:
+  actions:
+    update: Güncelleme
+    create: Oluşturma
+    destroy: Silme
+    delete: Silme
+    cancel: İptal Et
   javascript:
     remove_text: Kaldır
     available_text: Müsait
@@ -51,6 +57,7 @@ tr:
     dashboard: Kontrol Paneli
     companies: Şirketler
     astroturves: Halısağalarım
+    audits: İşlem Geçmişi
   navbar:
     login: Giriş Yap
     edit_profile: Profil Güncelle
@@ -61,6 +68,7 @@ tr:
     login_as_company: Halısahacı Girişi
     signin: Giriş Yap
     settings: Ayarlar
+    audits: İşlem Geçmişi
     language:
       en: English
       tr: Türkçe
@@ -69,14 +77,20 @@ tr:
       next_label: "Sonraki &#8594;"
       page_gap: "&hellip;"
   view:
+    are_you_sure: Emin misiniz?
+    quick_search: Arama yap..
+    'yes': Evet
+    'no': Hayır
+    empty: Herhangi bir veri yok..
+    select: Lütfen seçiniz!
+    actions: İşlemler
+    important: Önemli !!!
     choose: Lütfen Seçiniz
     blank_message: Hiç bir veri bulunamadı
     reload: Yeniden Yükle
     sure: Emin misiniz?
     search: Arama
     actions: İşlemler
-    yes: Evet
-    no: Hayır
     list: '%{resource_name} Listesi'
     blank: Belirtilmedi
     button:

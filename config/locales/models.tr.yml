@@ -13,6 +13,7 @@ tr:
       astroturf: Halısağa
       astroturves: Halısağalar
       timetable: Zaman Çizelgesi
+      audits: İşlem Geçmişi
     attributes:
       admin:
         id: Id
@@ -51,6 +52,18 @@ tr:
         first_name: İsim
         last_name: Soyisim
         gsm: Telefon
+      audits:
+        id: ID
+        user_type: Kullanıcı Tipi
+        user: Kullanıcı
+        type: Tip
+        type_id: Tip Id
+        action: İşlem
+        user_id: İşlemi Yapan
+        auditable_type: İşlem Yapılan
+        auditable_id: İşlem Yapılan ID
+        action: İşlem Türü
+        created_at: Tarih
       company:
         id: Id
         name: İsim

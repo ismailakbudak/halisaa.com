@@ -11,6 +11,7 @@ Halisaa::Application.routes.draw do
   namespace :hq do
     root to: 'dashboard#index'
     resource :admin_profile, except: [:destroy], path: 'profile'
+    resources :audits, only: [:index, :show]
     resources :users, except: [:create, :new] do
       post :block, on: :member
       post :unblock, on: :member

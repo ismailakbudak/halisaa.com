@@ -22,10 +22,11 @@
     / %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
     = stylesheet_link_tag 'hq/application',
                           '//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css',
+                          '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
                           media: 'all'
-      / Javascripts
-    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js',
-                         'hq/application'
+    / Javascripts
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', 'data-turbolinks-track' => true
+    = javascript_include_tag 'hq/application', 'data-turbolinks-track' => true
     = yield :head
 
   %body.main

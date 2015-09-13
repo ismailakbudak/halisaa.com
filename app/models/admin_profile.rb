@@ -1,4 +1,5 @@
 class AdminProfile < ActiveRecord::Base
+  audited
   belongs_to :admin
   validates_presence_of :first_name, :last_name
 

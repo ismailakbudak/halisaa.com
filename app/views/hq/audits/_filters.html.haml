@@ -1,0 +1,21 @@
+.table-header.row
+  .col-lg-12
+    .pull-right
+      = search_form_for @search, builder: SimpleForm::FormBuilder, html: {class: 'form-inline'}, url: hq_audits_path do |f|
+        .form-group
+          = f.label :user, label: t('activerecord.attributes.audits.user_type')
+          = f.input_field :user_type_eq, label: false, class: 'form-control', placeholder: t('activerecord.attributes.audits.user'), collection: ['Admin', 'User'], include_blank: t('view.select')
+
+          = f.label :user, label: t('activerecord.attributes.audits.user')
+          = f.input_field :user_id_eq, label: false, class: 'form-control chosen-select', placeholder: t('activerecord.attributes.audits.user'), collection: Admin.all.map{|a| [a.try(:full_name), a.id]} + User.all.map{|u| [u.email, u.id]}, include_blank: t('view.select')
+
+          = f.label :auditable_type, label: t('activerecord.attributes.audits.auditable_type')
+          = f.input_field :auditable_type_eq, label: false, class: 'form-control chosen-select', placeholder: t('activerecord.attributes.audits.auditable_type'), collection: @auditable_types.map{|a| [t("activerecord.models.#{a.auditable_type.underscore}"), a.auditable_type]}, include_blank: t('view.select')
+
+          = f.label :user, label: t('activerecord.attributes.audits.auditable_id')
+          = f.input_field :auditable_id_eq, label: false, class: 'form-control', placeholder: t('activerecord.attributes.audits.auditable_id')
+
+          = f.label :user, label: t('activerecord.attributes.audits.action')
+          = f.input_field :action_eq, label: false, class: 'form-control', placeholder: t('activerecord.attributes.audits.action'), collection: %w(create update destroy).map{|a| [t("actions.#{a}"), a]}, include_blank: t('view.select')
+          = button_tag( class: 'btn btn-success btn-group') do
+            %i.fa.fa-search

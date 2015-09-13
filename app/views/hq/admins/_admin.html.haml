@@ -7,7 +7,7 @@
     -#  %i.icon.glyphicon.glyphicon-eye-open
     - if admin.blocked
       = link_to unblock_hq_admin_path(admin), class: 'btn btn-success btn-xs', title: t('admins.activate'), 'data-toggle' => 'tooltip', method: :post do
-        %i.icon-minus
+        %i.fa.fa-check
     - else
       = link_to block_hq_admin_path(admin), class: 'btn btn-danger btn-xs', title: t('admins.block'), 'data-toggle' => 'tooltip', method: :post do
         %i.icon-ban-circle
