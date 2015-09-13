@@ -25,6 +25,7 @@ Halisaa::Application.routes.draw do
     resources :companies, except: [:create, :new] do
       post :block, on: :member
       post :unblock, on: :member
+      post :sing_in, on: :member
       post :block_all, on: :collection
     end
   end

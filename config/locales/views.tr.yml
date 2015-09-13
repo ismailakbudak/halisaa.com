@@ -1,4 +1,6 @@
 tr:
+  tooltip:
+    login_as: Giriş Yap
   actions:
     update: Güncelleme
     create: Oluşturma

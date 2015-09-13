@@ -11,3 +11,6 @@
     - else
       = link_to block_hq_company_path(company), class: 'btn btn-danger btn-xs', title: t('companies.block'), 'data-toggle' => 'tooltip', method: :post do
         %i.icon-ban-circle
+    = link_to sing_in_hq_company_path(company), class: 'btn btn-info btn-xs', title: t('tooltip.login_as'), 'data-toggle' => 'tooltip', method: :post do
+      %i.fa.fa-sign-in
+

@@ -1,5 +1,5 @@
 class Hq::CompaniesController < Hq::ApplicationController
-  before_action :set_company, only: [:block, :unblock]
+  before_action :set_company, only: [:block, :unblock, :sing_in]
   add_breadcrumb I18n.t('activerecord.models.companies'), :hq_companies_path
 
   def index
@@ -33,9 +33,14 @@ class Hq::CompaniesController < Hq::ApplicationController
     redirect_to :back
   end
 
-  private
-  def set_company
-    @company = Company.find(params[:id])
+  def sing_in
+    sign_in(:company, @company)
+    redirect_to company_root_url
   end
+
+  private
+    def set_company
+      @company = Company.find(params[:id])
+    end
 
 end
