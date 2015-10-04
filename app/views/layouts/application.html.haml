@@ -1,18 +1,11 @@
 !!!
-%html
+%html{lang: I18n.locale}
   %head
-    %title
-      - if content_for?(:title)
-        = "#{yield(:title)} - Halisaa"
-      -else
-        Halisaa
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "", :name => "author"}/
-
+    = render 'layouts/partials/head'
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
     / Javascripts
@@ -22,9 +15,9 @@
   %body
     .container
       / Navbar
-      = render partial: 'layouts/partials/navbar'
+      = render 'layouts/partials/navbar'
       %hr/
-      = render partial: 'layouts/partials/messages'
+      = render 'layouts/partials/messages'
       = yield
       %hr/
       .footer

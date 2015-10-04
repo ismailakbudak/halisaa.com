@@ -1,0 +1,9 @@
+%title
+  - if content_for?(:title).present?
+    = "#{yield(:title).capitalize.titleize} - Halisaa"
+  -else
+    Halisaa
+%meta{:content => t('head.description'), :name => 'description'}/
+%meta{:content => t('head.author'), :name => 'author'}/
+%link(rel="icon" href="/favicon.ico")
+

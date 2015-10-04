@@ -143,3 +143,10 @@ tr:
     select_town: Semt Seciniz
     drag_marker: Lokasyon seçmek için haritadaki yer işaretini sürükleyiniz.
     name_or_address_or_phone_or_city_name: İsim, Adres, Telefon veya Şehir İsmi
+  head:
+    author: Ismail AKBUDAK
+    description:
+  welcome:
+    index:
+      title: Anasayfa
+
