@@ -19,7 +19,7 @@
       - @audits.each do |audit|
         %tr
           %td= audit.user_type
-          %td= "#{audit.user.try(:full_name)} - #{audit.user.email}"
+          %td= "#{audit.user.email}"
           %td= t("activerecord.models.#{audit.auditable_type.underscore}")
           %td= audit.auditable_id
           %td= l audit.created_at

@@ -2,17 +2,15 @@
   = link_to edit_company_astroturf_path(@astroturf), class: 'btn btn-default' do
     %i.icon-pencil
     = t('action_button.edit')
+  #external-events
+    .fc-event{data: {id: @empty_timetable.id}}
+      = t('javascript.not_available_text')
 .panel.panel-default
   .panel-heading
     %i.icon-edit.icon-large
     = t('tt.show', resource_name: Timetable.model_name.human)
   .panel-body
-    .col-lg-2
-
-      #external-events
-        .fc-event{data: {id: @empty_timetable.id}}
-          = t('javascript.not_available_text')
-    .col-lg-10
+    .col-lg-12
       #calendar
 
 - content_for :head do
