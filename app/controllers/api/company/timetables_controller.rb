@@ -20,7 +20,7 @@ class Api::Company::TimetablesController < Api::Company::ApplicationController
         end: timetable.finish,
         destroyAble: destroyAble,
         editable: editable,
-        color: '#3A87AD',
+        className: "timetable #{timetable.status}",
         url: ''
       }
       events.push event

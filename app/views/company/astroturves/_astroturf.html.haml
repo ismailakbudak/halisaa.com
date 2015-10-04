@@ -7,8 +7,10 @@
   %td
     =link_to company_astroturf_path(astroturf), class: 'btn btn-info btn-xs', title: t('tooltip.show'), data: {toggle: 'tooltip'} do
       %i.fa.fa-eye
-    =link_to timetable_company_astroturf_path(astroturf), class: 'btn btn-info btn-xs', title: t('tooltip.timetable'), data: {toggle: 'tooltip'} do
+    =link_to timetable_company_astroturf_path(astroturf), class: 'btn btn-success btn-xs', title: t('tooltip.timetable'), data: {toggle: 'tooltip'} do
       %i.fa.fa-calendar
+    =link_to detail_company_astroturf_path(astroturf), class: 'btn btn-info btn-xs', title: t('tooltip.timetable_detail'), data: {toggle: 'tooltip'} do
+      %i.fa.fa-calendar-o
     =link_to edit_company_astroturf_path(astroturf), class: 'btn btn-success btn-xs', title: t('tooltip.edit'), data: {toggle: 'tooltip'} do
       %i.fa.fa-pencil
     =link_to company_astroturf_path(astroturf), data: { toggle: 'tooltip', confirm: t('view.sure')}, class: 'btn btn-danger btn-xs', title: t('tooltip.delete'), method: :delete do

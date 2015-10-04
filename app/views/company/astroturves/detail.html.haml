@@ -1,0 +1,27 @@
+- content_for :toolbar do
+  = link_to edit_company_astroturf_path(@astroturf), class: 'btn btn-default', title: t('tooltip.edit'), data: {toggle: 'tooltip', placement: 'bottom'} do
+    %i.icon-pencil
+    = t('action_button.edit')
+  =link_to timetable_company_astroturf_path(@astroturf), class: 'btn btn-info', title: t('tooltip.timetable'), data: {toggle: 'tooltip', placement: 'bottom'} do
+    %i.fa.fa-calendar
+    = t('tooltip.timetable')
+
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+    = t('tt.show', resource_name: Astroturf.model_name.human)
+  .panel-body
+    .col-lg-12
+      #calendar-show
+- content_for :head do
+  = stylesheet_link_tag '/plugins/fullcalendar-2.4.0/fullcalendar.css'
+
+:coffeescript
+  @app.publicApiTimetablesIndexUrl  = '#{api_astroturf_timetables_index_path @astroturf}'
+
+- content_for :foot do
+  = javascript_include_tag '/plugins/fullcalendar-2.4.0/lib/moment.min.js',
+   '/plugins/fullcalendar-2.4.0/lib/jquery-ui.custom.min.js',
+   '/plugins/fullcalendar-2.4.0/fullcalendar.min.js',
+   '/plugins/fullcalendar-2.4.0/lang-all.js',
+   'company/fullcalendar-show'

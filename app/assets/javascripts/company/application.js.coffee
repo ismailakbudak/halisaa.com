@@ -15,6 +15,33 @@
 #= require bootstrap
 #= require hierapolis
 #= require chosen-jquery
+
+class @Halisaa
+  @check_configs = ->
+    if typeof app.locale == 'undefined'
+      app.locale = 'en'
+    if typeof app.slotDuration == 'undefined'
+      app.slotDuration = '00:30:00'
+    if typeof app.slotLabelFormat == 'undefined'
+      app.slotLabelFormat = 'H:mm'
+    if typeof app.titleFormat == 'undefined'
+      app.titleFormat = 'MMMM DD YYYY'
+    if typeof app.columnFormat == 'undefined'
+      app.columnFormat = 'dddd MM/DD'
+    if typeof app.scrollTime == 'undefined'
+      app.scrollTime = '10:00:00'
+    if typeof app.remove_text == 'undefined'
+      app.remove_text = 'Remove'
+    if typeof app.available_text == 'undefined'
+      app.available_text = 'Available'
+    if typeof app.error_occurred_text == 'undefined'
+      app.error_occurred_text = 'Error occurred'
+    app.previousWeekCount  = -5
+    app.featureWeekCount   = 10
+    app.date_format        = "YYYY-MM-DD"
+    app.datetime_format    = "YYYY-MM-DD HH:mm:ss"
+    return
+
 ready = ->
   # enable chosen js
   $('.chosen-select').chosen

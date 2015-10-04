@@ -4,7 +4,8 @@ tr:
     show: Göster
     delete: Sil
     edit: Düzenle
-    timetable: Zaman Çizelgesi
+    timetable_detail: Zaman Çizelgesi
+    timetable: Zaman Çizelgesi Düzenle
   simple_form:
     "yes": 'Evet'
     "no": 'Hayır'

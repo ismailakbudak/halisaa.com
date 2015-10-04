@@ -1,22 +1,5 @@
 $(document).ready ->
-  if typeof app.locale == 'undefined'
-    app.locale = 'en'
-  if typeof app.timetablesUrl == 'undefined'
-    app.timetablesUrl = '/timetables'
-  if typeof app.remove_text == 'undefined'
-    app.remove_text = 'Remove'
-  if typeof app.available_text == 'undefined'
-    app.available_text = 'Available'
-  if typeof app.error_occurred_text == 'undefined'
-    app.error_occurred_text = 'Error occurred'
-  if typeof app.start_time == 'undefined'
-    app.start_time = '08:00'
-  if typeof app.end_time == 'undefined'
-    app.end_time = '02:00'
-  app.previousWeekCount  = -5
-  app.featureWeekCount   = 10
-  app.date_format        = "YYYY-MM-DD"
-  app.datetime_format    = "YYYY-MM-DD HH:mm:ss"
+  Halisaa.check_configs()
 
   # Delete event from database
   deleteEvent = (event, callback) ->
@@ -98,13 +81,13 @@ $(document).ready ->
       right: 'month,agendaWeek,agendaDay'
     editable: true
     lang: app.locale
-    contentHeight: 'auto'
+    #contentHeight: 'auto'
     defaultView: 'agendaWeek'
-    slotDuration: '00:30:00'
-    slotLabelFormat: 'H:mm'
-    titleFormat: 'MMMM DD YYYY'
-    columnFormat: 'dddd MM/DD'
-    scrollTime: '08:00:00'
+    slotDuration: app.slotDuration
+    slotLabelFormat: app.slotLabelFormat
+    titleFormat: app.titleFormat
+    columnFormat: app.columnFormat
+    scrollTime: app.scrollTime
     forceEventDuration: true
     allDaySlot: true
     slotEventOverlap: false
