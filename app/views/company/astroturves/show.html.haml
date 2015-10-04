@@ -1,3 +1,7 @@
+- content_for :title do
+  = @astroturf.name
+  = t('tt.show', resource_name: Astroturf.model_name.human)
+
 - content_for :toolbar do
   =link_to detail_company_astroturf_path(@astroturf), class: 'btn btn-info', title: t('tooltip.timetable_detail'), data: {toggle: 'tooltip', placement: 'bottom'} do
     %i.fa.fa-calendar-o

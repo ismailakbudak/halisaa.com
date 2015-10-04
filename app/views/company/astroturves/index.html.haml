@@ -1,7 +1,11 @@
+- content_for :title do
+  = t('tt.index', resource_name: Astroturf.model_name.human)
+
 - content_for :toolbar do
   = link_to new_company_astroturf_path, class: 'btn btn-info' do
     %i.icon-plus-circle
       = t('tt.new', resource_name: Astroturf.model_name.human)
+
 .panel.panel-default
   = blankable( current_company.astroturves.count)
   .panel-footer

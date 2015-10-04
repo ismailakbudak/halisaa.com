@@ -1,4 +1,10 @@
-%h2= t('company.session.title')
+- content_for :title do
+  = t('company.session.title')
+
+%h2
+  %i.fa.fa-building
+  = t('company.session.title')
+%hr/
 = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .form-inputs
     = f.input :email, label: t('activerecord.attributes.company.email'), required: false, autofocus: true

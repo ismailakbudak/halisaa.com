@@ -40,7 +40,7 @@ tr:
         button: Kayıt Ol
   company:
     session:
-      title:  Halısahacı Girişi
+      title:  Şirket Girişi
       button: Giriş Yap
       remember_me: Beni Hatırla
     edit:
@@ -51,7 +51,7 @@ tr:
       hint_password: Değiştirmek istemiyorsanız boş bırakınız
       hint_current_password: Değişiklikleri onaylamak için şuan ki şifrenizi girmelisiniz
       new:
-        title: Halısahacı Kayıt İşlemi
+        title: Şirket Kayıt İşlemi
         button:  Kayıt Ol
   dock:
     users: Kullanıcılar
@@ -66,8 +66,11 @@ tr:
     edit_login_info: Giriş Bilggilerini Güncelle
     logout: Çıkış
     signup: Kayıt Ol
-    signup_as_company: Halısahacı Ol
-    login_as_company: Halısahacı Girişi
+    register: Kayıt Ol
+    signup_as_user: Kullanıcı Olarak Kayıt Ol
+    login_as_user: Kullanıcı Olarak Giriş Yap
+    signup_as_company: Şirket Olarak Kayıt Ol
+    login_as_company: Şirket Olarak Giriş Yap
     signin: Giriş Yap
     settings: Ayarlar
     audits: İşlem Geçmişi
@@ -119,7 +122,7 @@ tr:
         title: Şifrenizi mi unuttunuz?
         instructions: Şifre sıfırlama talimatlarını gönder
       edit:
-        title: Şifrenizi Değiştriniz
+        title: Şire Değiştirme İsteği
         new_password: Yeni şifre
         confirmation: Yeni şifre doğrulması
         button: Şifremi Değiştir

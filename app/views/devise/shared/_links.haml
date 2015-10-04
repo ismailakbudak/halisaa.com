@@ -1,5 +1,7 @@
 - if controller_name != 'sessions'
-  = link_to t('shared.links.signin'), new_session_path(resource_name)
+  = link_to new_session_path(resource_name) do
+    .fa.fa-sign-in
+    = t('shared.links.signin')
   %br/
 - if devise_mapping.registerable? && controller_name != 'registrations'
   = link_to t('shared.links.signup'), new_registration_path(resource_name)

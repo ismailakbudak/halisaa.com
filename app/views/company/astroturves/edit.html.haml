@@ -1,3 +1,8 @@
+- content_for :title do
+  = @astroturf.name
+  = t('tt.edit', resource_name: Astroturf.model_name.human)
+
 - content_for :form_title do
   = t('tt.edit', resource_name: Astroturf.model_name.human)
+
 = render 'form'

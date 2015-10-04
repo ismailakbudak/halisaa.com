@@ -1,4 +1,9 @@
-%h2= t('common.password.reset.title')
+- content_for :title do
+  = t('common.password.reset.title')
+
+%h2
+  = t('common.password.reset.title')
+%hr/
 = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
   = f.error_notification
   .form-inputs

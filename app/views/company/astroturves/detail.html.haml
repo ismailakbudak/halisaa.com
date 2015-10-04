@@ -1,3 +1,6 @@
+- content_for :title do
+  = t('tt.show', resource_name: Timetable.model_name.human)
+  = " - #{@astroturf.name}"
 - content_for :toolbar do
   = link_to edit_company_astroturf_path(@astroturf), class: 'btn btn-default', title: t('tooltip.edit'), data: {toggle: 'tooltip', placement: 'bottom'} do
     %i.icon-pencil
